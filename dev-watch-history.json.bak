@@ -1,0 +1,19 @@
+[
+  {
+    "id": "c85e822e-1ce0-434e-a659-f91532c91f92",
+    "user_id": "nithila7777@gmail.com",
+    "content_id": "1197306",
+    "content_type": "movie",
+    "title": "A Working Man",
+    "poster_path": "/xUkUZ8eOnrOnnJAfusZUqKYZiDu.jpg",
+    "backdrop_path": "/fTrQsdMS2MUw00RnzH0r3JWHhts.jpg",
+    "watched_time": 36,
+    "total_duration": 7200,
+    "percent_complete": 1,
+    "season_number": null,
+    "episode_number": null,
+    "episode_title": null,
+    "created_at": "2025-05-03T16:59:41.249Z",
+    "updated_at": "2025-05-03T17:00:07.233Z"
+  }
+]
