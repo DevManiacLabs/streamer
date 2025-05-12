@@ -1,48 +1,14 @@
-import axios from 'axios';
 import { Movie, TVShow, Season, Episode, EpisodeGroup, SearchResponse } from "@/types/tmdb";
+import { API_CONFIG } from "@/lib/config";
 
-// TMDB API Types
-export interface TMDBMovie {
-  id: number;
-  title: string;
-  overview: string;
-  poster_path: string;
-  backdrop_path: string;
-  release_date: string;
-  vote_average: number;
-  vote_count: number;
-  genre_ids: number[];
-  original_language: string;
-  popularity: number;
-}
+// Destructure configuration for cleaner code
+const { BASE_URL, IMAGE_BASE_URL, PLACEHOLDER_POSTER, PLACEHOLDER_BACKDROP, CACHE_TTL } = API_CONFIG.TMDB;
 
-export interface TMDBTVShow {
-  id: number;
-  name: string;
-  overview: string;
-  poster_path: string;
-  backdrop_path: string;
-  first_air_date: string;
-  vote_average: number;
-  vote_count: number;
-  genre_ids: number[];
-  original_language: string;
-  popularity: number;
-}
-
-export interface TMDBSearchResponse<T> {
-  page: number;
-  results: T[];
-  total_pages: number;
-  total_results: number;
-}
-
-// Base API configuration
-const TMDB_BASE_URL = 'https://api.themoviedb.org/3';
-const TMDB_IMAGE_BASE_URL = 'https://image.tmdb.org/t/p';
-
-// Get API key from environment
-const getApiKey = () => {
+/**
+ * Get API key from environment variables
+ * @throws Error if API key is not set
+ */
+const getApiKey = (): string => {
   const apiKey = process.env.NEXT_PUBLIC_TMDB_API_KEY;
   if (!apiKey) {
     console.error('TMDB API key is not set in environment variables');
@@ -51,21 +17,21 @@ const getApiKey = () => {
   return apiKey;
 };
 
-// Helper function for making API requests
-const makeRequest = async <T>(endpoint: string, params = {}) => {
+/**
+ * Generic request function for TMDB API
+ */
+const fetchFromTMDB = async <T>(endpoint: string, params = {}): Promise<T> => {
   try {
-    const apiKey = getApiKey();
-    console.log('Making request to:', endpoint);
-    console.log('Using API key:', apiKey ? 'Set' : 'Not Set');
+    const response = await fetch(
+      `${BASE_URL}${endpoint}?api_key=${getApiKey()}&${new URLSearchParams(params)}`,
+      { next: { revalidate: CACHE_TTL } }
+    );
     
-    const response = await axios.get<T>(`${TMDB_BASE_URL}${endpoint}`, {
-      params: {
-        api_key: apiKey,
-        language: 'en-US',
-        ...params,
-      },
-    });
-    return response.data;
+    if (!response.ok) {
+      throw new Error(`TMDB API error: ${response.status}`);
+    }
+    
+    return response.json();
   } catch (error) {
     console.error(`Error fetching ${endpoint}:`, error);
     throw error;
@@ -74,8 +40,7 @@ const makeRequest = async <T>(endpoint: string, params = {}) => {
 
 // API Services
 export async function getPopularMovies(page: number = 1): Promise<{ content: Movie[]; totalPages: number }> {
-  const response = await fetch(`${TMDB_BASE_URL}/movie/popular?api_key=${getApiKey()}&page=${page}`);
-  const data = await response.json();
+  const data = await fetchFromTMDB<{results: Movie[], total_pages: number}>(`/movie/popular`, { page });
   return {
     content: data.results,
     totalPages: data.total_pages,
@@ -83,8 +48,7 @@ export async function getPopularMovies(page: number = 1): Promise<{ content: Mov
 }
 
 export async function getPopularTVShows(page: number = 1): Promise<{ content: TVShow[]; totalPages: number }> {
-  const response = await fetch(`${TMDB_BASE_URL}/tv/popular?api_key=${getApiKey()}&page=${page}`);
-  const data = await response.json();
+  const data = await fetchFromTMDB<{results: TVShow[], total_pages: number}>(`/tv/popular`, { page });
   return {
     content: data.results,
     totalPages: data.total_pages,
@@ -92,19 +56,16 @@ export async function getPopularTVShows(page: number = 1): Promise<{ content: TV
 }
 
 export async function getMovieDetails(id: number): Promise<Movie> {
-  const response = await fetch(`${TMDB_BASE_URL}/movie/${id}?api_key=${getApiKey()}`);
-  return response.json();
+  return fetchFromTMDB<Movie>(`/movie/${id}`);
 }
 
 export async function getTVShowDetails(id: number): Promise<TVShow> {
-  // Fetch the base TV show details
-  const response = await fetch(`${TMDB_BASE_URL}/tv/${id}?api_key=${getApiKey()}&append_to_response=seasons`);
-  const show = await response.json();
+  // Fetch the base TV show details with seasons
+  const show = await fetchFromTMDB<TVShow>(`/tv/${id}`, { append_to_response: 'seasons' });
   
   try {
     // Fetch episode groups in a separate call
-    const episodeGroupsResponse = await fetch(`${TMDB_BASE_URL}/tv/${id}/episode_groups?api_key=${getApiKey()}`);
-    const episodeGroupsData = await episodeGroupsResponse.json();
+    const episodeGroupsData = await fetchFromTMDB<{ results: EpisodeGroup[] }>(`/tv/${id}/episode_groups`);
     
     // Add episode groups to the show data
     if (episodeGroupsData && episodeGroupsData.results) {
@@ -119,22 +80,19 @@ export async function getTVShowDetails(id: number): Promise<TVShow> {
 }
 
 export async function getTVSeasonDetails(tvId: number, seasonNumber: number): Promise<Season> {
-  const response = await fetch(`${TMDB_BASE_URL}/tv/${tvId}/season/${seasonNumber}?api_key=${getApiKey()}`);
-  return response.json();
+  return fetchFromTMDB<Season>(`/tv/${tvId}/season/${seasonNumber}`);
 }
 
 export async function getTVEpisodeDetails(tvId: number, seasonNumber: number, episodeNumber: number): Promise<Episode> {
-  const response = await fetch(`${TMDB_BASE_URL}/tv/${tvId}/season/${seasonNumber}/episode/${episodeNumber}?api_key=${getApiKey()}`);
-  return response.json();
+  return fetchFromTMDB<Episode>(`/tv/${tvId}/season/${seasonNumber}/episode/${episodeNumber}`);
 }
 
 export async function getTVEpisodeGroups(tvId: number): Promise<{ results: EpisodeGroup[] }> {
-  const response = await fetch(`${TMDB_BASE_URL}/tv/${tvId}/episode_groups?api_key=${getApiKey()}`);
-  return response.json();
+  return fetchFromTMDB<{ results: EpisodeGroup[] }>(`/tv/${tvId}/episode_groups`);
 }
 
 export async function searchMovies(query: string, page: number = 1): Promise<SearchResponse<Movie>> {
-  const response = await fetch(`/api/search/movies?query=${encodeURIComponent(query)}&page=${page}`);
+  const response = await fetch(`${API_CONFIG.INTERNAL.SEARCH_ENDPOINT}/movies?query=${encodeURIComponent(query)}&page=${page}`);
   if (!response.ok) {
     throw new Error('Failed to search movies');
   }
@@ -142,7 +100,7 @@ export async function searchMovies(query: string, page: number = 1): Promise<Sea
 }
 
 export async function searchTVShows(query: string, page: number = 1): Promise<SearchResponse<TVShow>> {
-  const response = await fetch(`/api/search/tv?query=${encodeURIComponent(query)}&page=${page}`);
+  const response = await fetch(`${API_CONFIG.INTERNAL.SEARCH_ENDPOINT}/tv?query=${encodeURIComponent(query)}&page=${page}`);
   if (!response.ok) {
     throw new Error('Failed to search TV shows');
   }
@@ -151,11 +109,11 @@ export async function searchTVShows(query: string, page: number = 1): Promise<Se
 
 // Image URL helpers
 export function getPosterUrl(path: string | null, size: string = "w500"): string {
-  if (!path) return "/placeholder-poster.png";
-  return `https://image.tmdb.org/t/p/${size}${path}`;
+  if (!path) return PLACEHOLDER_POSTER;
+  return `${IMAGE_BASE_URL}/${size}${path}`;
 }
 
 export function getBackdropUrl(path: string | null, size: string = "original"): string {
-  if (!path) return "/placeholder-backdrop.png";
-  return `https://image.tmdb.org/t/p/${size}${path}`;
+  if (!path) return PLACEHOLDER_BACKDROP;
+  return `${IMAGE_BASE_URL}/${size}${path}`;
 } 

@@ -2,16 +2,14 @@
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { getAuthUser, isAdmin } from '@/lib/auth';
+import { getAuthUser } from '@/lib/auth';
 
 interface ProtectedRouteProps {
   children: React.ReactNode;
-  adminOnly?: boolean;
 }
 
 export default function ProtectedRoute({ 
-  children, 
-  adminOnly = false
+  children
 }: ProtectedRouteProps) {
   const router = useRouter();
   const [isAuthorized, setIsAuthorized] = useState(false);
@@ -22,19 +20,13 @@ export default function ProtectedRoute({
     const user = getAuthUser();
     
     if (!user) {
-      router.push('/admin/login');
-      return;
-    }
-    
-    // If admin only, check if user is admin
-    if (adminOnly && !isAdmin()) {
-      router.push('/admin/login?unauthorized=true');
+      router.push('/login');
       return;
     }
     
     setIsAuthorized(true);
     setIsLoading(false);
-  }, [router, adminOnly]);
+  }, [router]);
 
   if (isLoading) {
     return (

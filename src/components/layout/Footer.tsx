@@ -1,32 +1,40 @@
 import Link from 'next/link';
+import { ROUTE_CONFIG } from '@/lib/config';
 
 export function Footer() {
+  const currentYear = new Date().getFullYear();
+  
   return (
-    <footer className="border-t py-6 md:py-10">
-      <div className="container flex flex-col items-center justify-between gap-4 md:flex-row">
-        <div className="flex flex-col items-center gap-4 md:items-start md:gap-2">
-          <Link href="/" className="flex items-center space-x-2">
-            <span className="font-bold text-lg">FreeFlix</span>
-          </Link>
-          <p className="text-center text-sm text-muted-foreground md:text-left">
-            &copy; {new Date().getFullYear()} FreeFlix. All rights reserved.
-          </p>
-        </div>
-        <div className="flex items-center gap-4">
-          <nav className="flex gap-4 sm:gap-6">
-            <Link href="/about" className="text-sm underline-offset-4 hover:underline">
+    <footer className="bg-black py-8 mt-12 border-t border-gray-800">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col md:flex-row justify-between items-center">
+          {/* Logo */}
+          <div className="mb-4 md:mb-0">
+            <Link href={ROUTE_CONFIG.HOME} className="text-xl font-bold text-red-600">
+              FreeFlix
+            </Link>
+          </div>
+          
+          {/* Footer Links */}
+          <nav className="flex gap-6 mb-4 md:mb-0" aria-label="Footer Navigation">
+            <Link href="/about" className="text-sm text-gray-400 hover:text-white transition-colors">
               About
             </Link>
-            <Link href="/terms" className="text-sm underline-offset-4 hover:underline">
+            <Link href="/terms" className="text-sm text-gray-400 hover:text-white transition-colors">
               Terms
             </Link>
-            <Link href="/privacy" className="text-sm underline-offset-4 hover:underline">
+            <Link href="/privacy" className="text-sm text-gray-400 hover:text-white transition-colors">
               Privacy
             </Link>
-            <Link href="/contact" className="text-sm underline-offset-4 hover:underline">
+            <Link href="/contact" className="text-sm text-gray-400 hover:text-white transition-colors">
               Contact
             </Link>
           </nav>
+          
+          {/* Copyright */}
+          <div className="text-gray-400 text-sm">
+            © {currentYear} FreeFlix. All rights reserved.
+          </div>
         </div>
       </div>
     </footer>

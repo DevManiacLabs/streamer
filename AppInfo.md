@@ -1,249 +1,233 @@
-# FreeFlix - Netflix-like Streaming Web Application
+# FreeFlix - Streaming Platform Documentation
 
-## Project Overview
-FreeFlix is a robust, fast-loading web application that allows users to browse and stream movies and TV shows using the VidSrc API. The application features a modern UI/UX similar to Netflix, with robust search capabilities, user preferences, and a smooth streaming experience.
+## Overview
+FreeFlix is a Netflix-like streaming platform that allows users to browse and stream movies and TV shows. The application uses the TMDB API for content metadata and the VidSrc API for streaming. It is built with Next.js, React, and TypeScript, providing a responsive and performant user experience.
 
-## Tech Stack
+## Table of Contents
+- [Architecture](#architecture)
+- [Directory Structure](#directory-structure)
+- [Core Technologies](#core-technologies)
+- [API Integrations](#api-integrations)
+- [Component Structure](#component-structure)
+- [Authentication](#authentication)
+- [Data Management](#data-management)
+- [Routing](#routing)
+- [Features](#features)
+- [Development Tools](#development-tools)
+
+## Architecture
 
 ### Frontend
-- **Framework**: Next.js (React) for server-side rendering and optimal performance
-- **Styling**: Tailwind CSS for responsive design
-- **State Management**: React Query for API data fetching and caching
-- **UI Components**: Headless UI or Radix UI for accessible components
+The application follows a component-based architecture using React and Next.js. It leverages the App Router pattern from Next.js for routing and uses React Query for data fetching and caching. The UI is built with Tailwind CSS for responsive styling.
 
 ### Backend
-- **API**: Next.js API routes for backend functionality
-- **Database**: Supabase (PostgreSQL) for user data, favorites, and watch history
-- **Authentication**: NextAuth.js for secure user authentication
+The backend functionality is implemented via Next.js API routes, which provide server-side capabilities for authentication, data fetching, and user data management. For development, the application uses a file-based storage system, but it's designed to be compatible with MongoDB for production use.
 
-## Scalability Considerations
+### Data Flow
+1. UI components request data through custom hooks
+2. Custom hooks use React Query to manage data fetching, caching, and state
+3. React Query interacts with external APIs through API wrapper modules
+4. Server-side API routes handle authenticated requests and proxy external API calls
 
-### Performance Under Load
-- **Static Generation**: Next.js pre-renders pages at build time, reducing server load
-- **Incremental Static Regeneration**: Update static content without rebuilding the entire site
-- **Edge Caching**: Utilize CDN caching for static assets and API responses
-- **API Rate Limiting**: Implement rate limiting to prevent API abuse
-- **Connection Pooling**: Optimize database connections for high concurrency
-- **Serverless Functions**: Scale automatically with incoming traffic
+## Directory Structure
 
-### Database Optimization
-- **Index Critical Columns**: Ensure proper indexing on frequently queried fields
-- **Query Optimization**: Write efficient queries to minimize database load
-- **Read Replicas**: Add read replicas for scaling read-heavy operations
-- **Connection Pooling**: Manage database connections efficiently
-- **Caching Layer**: Implement Redis for caching frequently accessed data
-
-### Content Delivery
-- **CDN Integration**: Use Content Delivery Networks for global distribution
-- **Image Optimization**: Implement automatic image resizing and optimization
-- **Lazy Loading**: Only load content as users scroll or navigate
-- **Compression**: Enable Gzip/Brotli compression for all assets
-
-## Key Features
-1. **Home Page**: Featured content, trending movies, and personalized recommendations
-2. **Browse Page**: Filter by genre, year, rating
-3. **Search Functionality**: Instant search results
-4. **Movie/TV Show Detail Pages**: Show synopsis, cast, related content
-5. **Video Player**: Custom controls, quality selection, subtitle support
-6. **User Profiles**: Watch history, favorites, preferences
-7. **Responsive Design**: Works seamlessly on all devices
-
-## Project Structure
 ```
-free-flix/
+freeFlix/
 ├── public/                # Static assets
 ├── src/
-│   ├── app/               # Next.js App Router pages
-│   ├── components/        # Reusable UI components
-│   │   ├── layout/        # Layout components
-│   │   ├── ui/            # Core UI components
-│   │   └── features/      # Feature-specific components
-│   ├── lib/               # Utility functions and helpers
 │   ├── api/               # API integration layer
-│   └── hooks/             # Custom React hooks
-├── tailwind.config.js     # Tailwind configuration
-└── next.config.js         # Next.js configuration
+│   │   ├── tmdb.ts        # The Movie Database API integration
+│   │   ├── vidsrc.ts      # VidSrc streaming API integration
+│   │   └── mongodb.ts     # MongoDB database integration
+│   ├── app/               # Next.js App Router pages
+│   │   ├── api/           # API routes for server-side functionality
+│   │   ├── movie/         # Movie detail pages
+│   │   ├── tv/            # TV show pages
+│   │   ├── login/         # Authentication pages
+│   │   ├── signup/        # User registration
+│   │   ├── profile/       # User profile management
+│   │   ├── search/        # Search functionality
+│   │   └── watch-history/ # User's watch history
+│   ├── components/        # Reusable UI components
+│   │   ├── ui/            # Core UI components (Button, Card, etc.)
+│   │   ├── features/      # Feature-specific components
+│   │   ├── layout/        # Layout components
+│   │   └── auth/          # Authentication components
+│   ├── hooks/             # Custom React hooks
+│   │   ├── useTMDB.ts     # TMDB data fetching hooks
+│   │   ├── useVidSrc.ts   # VidSrc API hooks
+│   │   └── useWatchHistory.ts # Watch history management
+│   ├── lib/               # Utility functions and helpers
+│   │   ├── config.ts      # Centralized configuration
+│   │   ├── utils.ts       # Utility functions
+│   │   └── auth.ts        # Authentication helpers
+│   ├── types/             # TypeScript type definitions
+│   └── middleware.ts      # Next.js middleware for auth & routing
+├── scripts/               # Utility scripts for data initialization
 ```
 
-## Development Roadmap
+## Core Technologies
 
-### Phase 1: Project Setup and Basic Structure
-1. Initialize Next.js project with Tailwind CSS
-2. Set up project structure
-3. Create basic layout components
-4. Implement API integration with VidSrc
+- **Framework**: Next.js 14.x (React 18.x)
+- **Language**: TypeScript
+- **Data Fetching**: React Query (TanStack Query)
+- **Styling**: Tailwind CSS
+- **Authentication**: NextAuth.js
+- **Database**: MongoDB (File-based storage for development)
+- **State Management**: React Query + React Context
 
-### Phase 2: Core Functionality
-1. Implement home page with movie listings
-2. Create movie detail pages
-3. Build basic video player
-4. Set up pagination for movie lists
+## API Integrations
 
-### Phase 3: Authentication and User Features
-1. Implement user authentication
-2. Add favorites functionality
-3. Create watch history tracking
-4. Add user preferences
+### TMDB API
+- Provides movie and TV show metadata, images, and details
+- Implementation in `src/api/tmdb.ts`
+- Accessed via custom hooks in `src/hooks/useTMDB.ts`
+- Cached according to the configuration in `src/lib/config.ts`
 
-### Phase 4: UI/UX Enhancements
-1. Improve responsive design
-2. Add animations and transitions
-3. Implement dark/light mode
-4. Optimize loading states and performance
+### VidSrc API
+- Provides video streaming capabilities
+- Implementation in `src/api/vidsrc.ts`
+- Accessed via custom hooks in `src/hooks/useVidSrc.ts`
+- Supports multiple domains for reliability
 
-### Phase 5: Advanced Features
-1. Add search functionality with filters
-2. Implement recommendations engine
-3. Add subtitle support
-4. Create custom video player controls
+## Component Structure
 
-## API Integration
+### UI Components
+- **Layout**: Global app layout, navigation, footer
+- **Cards**: Content display cards for movies and TV shows
+- **Hero Sections**: Featured content with backdrop images
+- **Content Rows**: Horizontal scrollable rows of content
+- **Player**: Video player for streaming content
+- **Mobile Navigation**: Dropdown menu for mobile devices
 
-### VidSrc API Documentation
+### Feature Components
+- **SearchBar**: Multi-type search functionality
+- **ContinueWatching**: Shows user's recent viewing history
+- **UserMenu**: Account management dropdown
+- **ContentDetails**: Detailed information about movies/shows
 
-VidSrc provides comprehensive API endpoints for streaming movies and TV shows. The API allows embedding video content directly into our application.
+## Authentication
 
-#### Available Domains
-Use any of these domains for embed URLs:
-- vidsrc.in
-- vidsrc.pm
-- vidsrc.xyz
-- vidsrc.net
+### User Authentication Flow
+1. Users register or sign in through the login/signup pages
+2. NextAuth.js handles authentication state and session management
+3. Protected routes are guarded by the middleware
+4. Authenticated routes require a valid session
+5. User data is stored and retrieved based on authentication status
 
-#### Movie Endpoints
+### Implementation
+- NextAuth.js for authentication management
+- Credentials provider for username/password authentication
+- Session management with JWT tokens
+- Protected routes via middleware in `src/middleware.ts`
 
-##### Get Movie Embed URL
-**Endpoint:** `https://vidsrc.xyz/embed/movie`
+## Data Management
 
-**Valid Parameters:**
-- `imdb` or `tmdb` (required) - IDs from imdb.com or themoviedb.com
-- `sub_url` (optional) - URL encoded .srt or .vtt subtitle URL. Must have CORS enabled.
-- `ds_lang` (optional) - Default subtitle language, ISO639 Language code.
+### React Query
+- Handles data fetching, caching, and state management
+- Configured with stale times and garbage collection times
+- Key-based cache management for optimal performance
 
-**Examples:**
-```
-https://vidsrc.xyz/embed/movie/tt5433140
-https://vidsrc.xyz/embed/movie?imdb=tt5433140
-https://vidsrc.xyz/embed/movie?imdb=tt5433140&ds_lang=de
-https://vidsrc.xyz/embed/movie?imdb=tt5433140&sub_url=https%3A%2F%2Fvidsrc.me%2Fsample.srt
-https://vidsrc.xyz/embed/movie/385687
-https://vidsrc.xyz/embed/movie?tmdb=385687
-https://vidsrc.xyz/embed/movie?tmdb=385687&ds_lang=de
-https://vidsrc.xyz/embed/movie?tmdb=385687&sub_url=https%3A%2F%2Fvidsrc.me%2Fsample.srt
-```
+### Custom Hooks
+- `useTMDB`: Fetch movie and TV show data
+- `useVidSrc`: Access streaming sources
+- `useWatchHistory`: Manage user watch history
 
-#### TV Show Endpoints
+### State Persistence
+- User watch history stored via API routes
+- Development mode uses file-based storage
+- Production design supports MongoDB
 
-##### Get TV Show Embed URL
-**Endpoint:** `https://vidsrc.xyz/embed/tv`
+## Routing
 
-**Valid Parameters:**
-- `imdb` or `tmdb` (required) - IDs from imdb.com or themoviedb.com
-- `ds_lang` (optional) - Default subtitle language, ISO639 Language code.
+### Next.js App Router
+- File-based routing system
+- Dynamic routes for content details
+- API routes for server-side functionality
 
-**Examples:**
-```
-https://vidsrc.xyz/embed/tv/tt0944947
-https://vidsrc.xyz/embed/tv?imdb=tt0944947
-https://vidsrc.xyz/embed/tv?imdb=tt0944947&ds_lang=de
-https://vidsrc.xyz/embed/tv/1399
-https://vidsrc.xyz/embed/tv?tmdb=1399&ds_lang=de
-```
+### Route Configuration
+- Centralized route definitions in `src/lib/config.ts`
+- Consistent URL structure for content types
+- Nested routes for TV seasons and episodes
 
-##### Get Episode Embed URL
-**Endpoint:** `https://vidsrc.xyz/embed/tv`
+## Features
 
-**Valid Parameters:**
-- `imdb` or `tmdb` (required) - IDs from imdb.com or themoviedb.com
-- `season` (required) - The season number
-- `episode` (required) - The episode number
-- `sub_url` (optional) - URL encoded .srt or .vtt subtitle URL. Must have CORS enabled.
-- `ds_lang` (optional) - Default subtitle language, ISO639 Language code.
+### Content Browsing
+- Home page with featured content and content rows
+- Category browsing for movies and TV shows
+- Detailed pages for individual content items
 
-**Examples:**
-```
-https://vidsrc.xyz/embed/tv/tt0944947/1-1
-https://vidsrc.xyz/embed/tv?imdb=tt0944947&season=1&episode=1
-https://vidsrc.xyz/embed/tv?imdb=tt0944947&season=1&episode=1&ds_lang=de
-https://vidsrc.xyz/embed/tv?imdb=tt0944947&season=1&episode=1&sub_url=https%3A%2F%2Fvidsrc.me%2Fsample.srt
-https://vidsrc.xyz/embed/tv/1399/1-1
-https://vidsrc.xyz/embed/tv?tmdb=1399&season=1&episode=1
-https://vidsrc.xyz/embed/tv?tmdb=1399&season=1&episode=1&ds_lang=de
-https://vidsrc.xyz/embed/tv?tmdb=1399&season=1&episode=1&sub_url=https%3A%2F%2Fvidsrc.me%2Fsample.srt
-```
+### Search
+- Real-time search with debounced input
+- Combined results for movies and TV shows
+- Deep linking to search results page
 
-#### Listing Endpoints
+### User Features
+- Watch history tracking with smart episode management
+  - Automatically remembers the most recently watched episode for TV shows
+  - Allows users to continue watching from where they left off
+  - Intelligent linking to the latest episode from cards and continue watching section
+- Profile management
+- Authentication and authorization
 
-##### List Latest Movies
-**Endpoint:** `https://vidsrc.xyz/movies/latest/page-{PAGE_NUMBER}.json`
+### Video Playback
+- Embedded video player
+- Support for multiple streaming sources
+- Season and episode navigation for TV shows
 
-**Parameters:**
-- `PAGE_NUMBER` (required) - The page number for pagination
+## Development Tools
 
-**Examples:**
-```
-https://vidsrc.xyz/movies/latest/page-1.json
-https://vidsrc.xyz/movies/latest/page-15.json
-```
+### Scripts
+- Data initialization and caching
+- Database management
+- Synchronization between TMDB and VidSrc
 
-##### List Latest TV Shows
-**Endpoint:** `https://vidsrc.xyz/tvshows/latest/page-{PAGE_NUMBER}.json`
+### Environment Configuration
+- `.env` files for configuration
+- Environment-specific settings
+- API key management
 
-**Parameters:**
-- `PAGE_NUMBER` (required) - The page number for pagination
+### Testing
+- Development mode features
+- Test account for quick testing
+- Logging and error handling
 
-**Examples:**
-```
-https://vidsrc.xyz/tvshows/latest/page-1.json
-https://vidsrc.xyz/tvshows/latest/page-15.json
-```
+## Performance Considerations
 
-##### List Latest Episodes
-**Endpoint:** `https://vidsrc.xyz/episodes/latest/page-{PAGE_NUMBER}.json`
+### Caching Strategy
+- React Query configured with appropriate stale times
+- Next.js static and dynamic rendering
+- Client-side caching for frequently accessed data
 
-**Parameters:**
-- `PAGE_NUMBER` (required) - The page number for pagination
+### Responsive Design
+- Mobile-first approach
+- Responsive UI components
+- Optimized image loading
 
-**Examples:**
-```
-https://vidsrc.xyz/episodes/latest/page-1.json
-https://vidsrc.xyz/episodes/latest/page-25.json
-```
+### Optimization
+- Lazy loading of components and images
+- Code splitting for better initial load time
+- Debounced search to reduce API calls
+- Optimistic updates for watch history to improve perceived performance
+- Duplicate detection in API endpoints to prevent excessive database operations
+- Reference tracking to prevent redundant state updates and API calls
+- Throttled invalidation of queries to prevent refetch waterfalls
 
-## Performance Optimization Techniques
-1. **Code Splitting**: Break down application into smaller chunks
-2. **Tree Shaking**: Eliminate unused code
-3. **Memoization**: Cache expensive function results
-4. **Virtualized Lists**: Render only visible items in long lists
-5. **Debouncing/Throttling**: Limit frequent function calls
-6. **Web Workers**: Offload heavy computations to background threads
-7. **Service Workers**: Enable offline functionality and cache assets
+### Watch History Performance
+- One-time watch history updates using reference tracking
+- Deduplication of watch history entries in the API
+- Optimistic updates in the React Query mutations
+- Throttled refetching to prevent excessive API calls
+- Time-based throttling to prevent duplicate entries within short time periods
 
-## Getting Started
+## Security
 
-### Prerequisites
-- Node.js (v16+)
-- npm or yarn
+### Authentication
+- Secure password handling
+- Session management
+- Protected routes via middleware
 
-### Installation
-1. Clone the repository
-2. Install dependencies with `npm install` or `yarn install`
-3. Create environment variables file `.env.local` with required credentials
-4. Run the development server with `npm run dev` or `yarn dev`
-
-## Testing Strategy
-- **Unit Testing**: Test individual components with Jest and React Testing Library
-- **Integration Testing**: Test component interactions
-- **E2E Testing**: Verify full user flows with Cypress
-- **Performance Testing**: Monitor Lighthouse scores and Web Vitals
-
-## Deployment
-- **Vercel**: Optimized for Next.js applications
-- **Netlify**: Alternative deployment platform
-- **Docker**: Containerized deployment for custom hosting
-
-## Contributing
-Guidelines for contributing to the project, code standards, and PR process.
-
-## License
-MIT License 
+### API Security
+- Environment variable protection
+- Server-side API request proxying
+- Input validation and sanitization

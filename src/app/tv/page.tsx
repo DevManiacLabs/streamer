@@ -6,14 +6,22 @@ import { getPosterUrl } from "@/api/tmdb";
 import { useState } from "react";
 import { TVShow } from "@/types/tmdb";
 
+interface TVShowResponse {
+  content: TVShow[];
+  totalPages: number;
+  currentPage?: number;
+}
+
 export default function TVPage() {
   const [page, setPage] = useState(1);
   const { data, isLoading } = usePopularTVShows(page, {
     refetchOnWindowFocus: false,
   });
 
-  const shows = data?.content || [];
-  const totalPages = data?.totalPages || 0;
+  // Handle different possible data shapes with type assertions
+  const typedData = data as TVShowResponse | undefined;
+  const shows = typedData?.content || [];
+  const totalPages = typedData?.totalPages || 0;
 
   return (
     <div className="container py-8">

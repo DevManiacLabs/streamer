@@ -1,0 +1,11 @@
+[2025-05-12T13:28:48.361Z] [INFO] Initializing TMDB to VidSrc Movie Sync...
+[2025-05-12T13:28:48.361Z] [INFO] Options: startPage=1, dryRun=false, concurrency=10
+[2025-05-12T13:28:49.376Z] [INFO] Connected to MongoDB successfully
+[2025-05-12T13:28:49.378Z] [INFO] Resuming from progress: Page 4486, Index 0
+[2025-05-12T13:28:49.378Z] [INFO] Processing page 4486 of 50257
+[2025-05-12T13:28:49.972Z] [ERROR] Failed to fetch movies from page 4486: AxiosError: Request failed with status code 400
+[2025-05-12T13:28:49.973Z] [INFO] Progress saved: Page 4486, Index 0
+[2025-05-12T13:28:49.973Z] [INFO] Processing page 4487 of 50257
+[2025-05-12T13:28:50.239Z] [ERROR] Failed to fetch movies from page 4487: AxiosError: Request failed with status code 400
+[2025-05-12T13:28:50.240Z] [INFO] Progress saved: Page 4487, Index 0
+[2025-05-12T13:28:50.241Z] [INFO] Processing page 4488 of 50257

@@ -4,7 +4,13 @@ import { usePopularMovies } from "@/hooks/useTMDB";
 import { Card } from "@/components/ui/Card";
 import { getPosterUrl } from "@/api/tmdb";
 import { useState } from "react";
-import { Movie } from "@/types/tmdb";
+import { Movie, SearchResponse } from "@/types/tmdb";
+
+interface MovieResponse {
+  content: Movie[];
+  totalPages: number;
+  currentPage?: number;
+}
 
 export default function MoviesPage() {
   const [page, setPage] = useState(1);
@@ -12,8 +18,10 @@ export default function MoviesPage() {
     refetchOnWindowFocus: false,
   });
 
-  const movies = data?.content || [];
-  const totalPages = data?.totalPages || 0;
+  // Handle different possible data shapes with type assertions
+  const typedData = data as MovieResponse | undefined;
+  const movies = typedData?.content || [];
+  const totalPages = typedData?.totalPages || 0;
 
   return (
     <div className="container py-8">

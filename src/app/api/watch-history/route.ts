@@ -27,20 +27,40 @@ const readWatchHistory = (): WatchHistoryItem[] => {
   try {
     if (fs.existsSync(WATCH_HISTORY_FILE)) {
       const data = fs.readFileSync(WATCH_HISTORY_FILE, 'utf8');
-      return JSON.parse(data);
+      try {
+        return JSON.parse(data);
+      } catch (parseError) {
+        console.error('Error parsing watch history file (invalid JSON):', parseError);
+        // Create a backup of the corrupted file
+        const backupPath = `${WATCH_HISTORY_FILE}.corrupted.${Date.now()}.bak`;
+        fs.copyFileSync(WATCH_HISTORY_FILE, backupPath);
+        console.log(`Created backup of corrupted file at ${backupPath}`);
+        return [];
+      }
     }
+    console.log('Watch history file does not exist, creating new one');
+    return [];
   } catch (err) {
     console.error('Error reading watch history file:', err);
+    return [];
   }
-  return [];
 };
 
 // Write watch history to file
-const writeWatchHistory = (history: WatchHistoryItem[]) => {
+const writeWatchHistory = (history: WatchHistoryItem[]): boolean => {
   try {
+    // Create a backup before writing
+    if (fs.existsSync(WATCH_HISTORY_FILE)) {
+      const backupPath = `${WATCH_HISTORY_FILE}.bak`;
+      fs.copyFileSync(WATCH_HISTORY_FILE, backupPath);
+    }
+    
+    // Format with indentation for readability
     fs.writeFileSync(WATCH_HISTORY_FILE, JSON.stringify(history, null, 2), 'utf8');
+    return true;
   } catch (err) {
     console.error('Error writing watch history file:', err);
+    return false;
   }
 };
 
@@ -95,6 +115,28 @@ export async function POST(request: Request) {
       );
     }
     
+    // Read current history first to check for duplicates
+    let history = readWatchHistory();
+    
+    // Check for exact duplicates before creating a new entry
+    const exactDuplicate = history.find(item => 
+      item.userId === userId && 
+      item.contentType === data.contentType && 
+      item.contentId === data.contentId &&
+      (data.contentType === 'movie' || 
+        (item.seasonNumber === data.seasonNumber && 
+         item.episodeNumber === data.episodeNumber))
+    );
+    
+    // If it's an exact duplicate that was added within the last minute, don't add it again
+    if (exactDuplicate && new Date().getTime() - new Date(exactDuplicate.watchedAt).getTime() < 60000) {
+      console.log(`Skipping duplicate watch history entry (added within the last minute): ${data.contentType} - ${data.contentName}${data.contentType === 'tvshow' ? ` S${data.seasonNumber}E${data.episodeNumber}` : ''}`);
+      return NextResponse.json(
+        { message: 'Watch history already updated recently', item: exactDuplicate },
+        { status: 200 }
+      );
+    }
+    
     // Create new history item
     const newItem: WatchHistoryItem = {
       id: uuidv4(),
@@ -109,21 +151,43 @@ export async function POST(request: Request) {
       watchedAt: new Date().toISOString()
     };
     
-    // Read current history
-    const history = readWatchHistory();
+    console.log(`Adding item to watch history: ${data.contentType} - ${data.contentName}${data.contentType === 'tvshow' ? ` S${data.seasonNumber}E${data.episodeNumber}` : ''}`);
+    console.log(`Current history length: ${history.length}`);
     
-    // Find and remove any existing entry for the same content
-    const existingItemIndex = history.findIndex(
-      item => item.userId === userId && 
-      item.contentType === data.contentType && 
-      item.contentId === data.contentId &&
-      (data.contentType === 'movie' || 
-        (item.seasonNumber === data.seasonNumber && 
-         item.episodeNumber === data.episodeNumber))
-    );
-    
-    if (existingItemIndex !== -1) {
-      history.splice(existingItemIndex, 1);
+    // Find and remove existing entries based on content type
+    if (data.contentType === 'movie') {
+      // For movies, remove exact matches (same movie)
+      const movieIndices = history
+        .map((item, index) => 
+          (item.userId === userId && 
+           item.contentType === 'movie' && 
+           item.contentId === data.contentId) ? index : -1
+        )
+        .filter(index => index !== -1);
+      
+      console.log(`Found ${movieIndices.length} existing entries for this movie`);
+      
+      // Remove all previous entries for this movie (from last to first to maintain correct indices)
+      for (let i = movieIndices.length - 1; i >= 0; i--) {
+        history.splice(movieIndices[i], 1);
+      }
+    } else if (data.contentType === 'tvshow') {
+      // For TV shows, remove any episode from the same show (same contentId)
+      // This ensures only the most recent episode of a series appears in history
+      const tvIndices = history
+        .map((item, index) => 
+          (item.userId === userId && 
+           item.contentType === 'tvshow' && 
+           item.contentId === data.contentId) ? index : -1
+        )
+        .filter(index => index !== -1);
+      
+      console.log(`Found ${tvIndices.length} existing entries for this TV show`);
+      
+      // Remove all previous entries for this TV show (from last to first to maintain correct indices)
+      for (let i = tvIndices.length - 1; i >= 0; i--) {
+        history.splice(tvIndices[i], 1);
+      }
     }
     
     // Add new item to the beginning (most recent)
@@ -145,7 +209,16 @@ export async function POST(request: Request) {
     }
     
     // Save updated history
-    writeWatchHistory(history);
+    const writeSuccess = writeWatchHistory(history);
+    
+    if (!writeSuccess) {
+      return NextResponse.json(
+        { error: 'Failed to write watch history file' },
+        { status: 500 }
+      );
+    }
+    
+    console.log(`Updated watch history. New length: ${history.length}`);
     
     return NextResponse.json(
       { message: 'Watch history updated', item: newItem },

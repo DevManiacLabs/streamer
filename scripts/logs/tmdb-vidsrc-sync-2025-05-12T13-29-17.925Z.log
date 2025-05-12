@@ -1,0 +1,359 @@
+[2025-05-12T13:29:17.936Z] [INFO] Initializing TMDB to VidSrc Movie Sync...
+[2025-05-12T13:29:17.936Z] [INFO] Options: startPage=0, dryRun=false, concurrency=10
+[2025-05-12T13:29:19.259Z] [INFO] Connected to MongoDB successfully
+[2025-05-12T13:29:19.261Z] [ERROR] Failed to load progress, starting fresh: SyntaxError: Unexpected token '/', "// {
+//   "... is not valid JSON
+[2025-05-12T13:29:19.744Z] [INFO] Total movie pages from TMDB: 50257
+[2025-05-12T13:29:19.745Z] [INFO] Progress saved: Page 1, Index 0
+[2025-05-12T13:29:19.745Z] [INFO] Processing page 1 of 50257
+[2025-05-12T13:29:19.884Z] [INFO] Fetched 20 movies from page 1
+[2025-05-12T13:29:20.002Z] [DEBUG] Checking movie 1241436 (Warfare) on vidsrc.me
+[2025-05-12T13:29:20.138Z] [DEBUG] Checking movie 1144430 (Last Bullet) on vidsrc.in
+[2025-05-12T13:29:20.236Z] [DEBUG] Checking movie 977294 (Tin Soldier) on vidsrc.pm
+[2025-05-12T13:29:20.329Z] [DEBUG] Checking movie 1197306 (A Working Man) on vidsrc.net
+[2025-05-12T13:29:20.423Z] [DEBUG] Checking movie 950387 (A Minecraft Movie) on vidsrc.xyz
+[2025-05-12T13:29:20.516Z] [DEBUG] Checking movie 1233069 (Exterritorial) on vidsrc.io
+[2025-05-12T13:29:20.519Z] [DEBUG] Checking movie 710258 (Rust) on vidsrc.vc
+[2025-05-12T13:29:20.522Z] [DEBUG] Checking movie 986056 (Thunderbolts*) on vidsrc.me
+[2025-05-12T13:29:20.685Z] [INFO] Found movie 1144430 (Last Bullet) available on vidsrc.in
+[2025-05-12T13:29:20.737Z] [INFO] Found movie 977294 (Tin Soldier) available on vidsrc.pm
+[2025-05-12T13:29:20.801Z] [INFO] Upserted movie 1144430 (Last Bullet) with availability: true
+[2025-05-12T13:29:20.812Z] [INFO] Found movie 1197306 (A Working Man) available on vidsrc.net
+[2025-05-12T13:29:20.839Z] [INFO] Upserted movie 977294 (Tin Soldier) with availability: true
+[2025-05-12T13:29:20.909Z] [INFO] Found movie 950387 (A Minecraft Movie) available on vidsrc.xyz
+[2025-05-12T13:29:20.910Z] [INFO] Upserted movie 1197306 (A Working Man) with availability: true
+[2025-05-12T13:29:21.006Z] [INFO] Upserted movie 950387 (A Minecraft Movie) with availability: true
+[2025-05-12T13:29:21.017Z] [INFO] Found movie 1233069 (Exterritorial) available on vidsrc.io
+[2025-05-12T13:29:21.026Z] [INFO] Found movie 710258 (Rust) available on vidsrc.vc
+[2025-05-12T13:29:21.035Z] [DEBUG] Checking movie 302946 (The Accountant) on vidsrc.in
+[2025-05-12T13:29:21.043Z] [DEBUG] Checking movie 897160 (Brave Citizen) on vidsrc.pm
+[2025-05-12T13:29:21.054Z] [INFO] Found movie 1241436 (Warfare) available on vidsrc.me
+[2025-05-12T13:29:21.114Z] [INFO] Upserted movie 1233069 (Exterritorial) with availability: true
+[2025-05-12T13:29:21.124Z] [INFO] Upserted movie 710258 (Rust) with availability: true
+[2025-05-12T13:29:21.153Z] [INFO] Upserted movie 1241436 (Warfare) with availability: true
+[2025-05-12T13:29:21.533Z] [INFO] Found movie 986056 (Thunderbolts*) available on vidsrc.me
+[2025-05-12T13:29:21.539Z] [INFO] Found movie 897160 (Brave Citizen) available on vidsrc.pm
+[2025-05-12T13:29:21.580Z] [INFO] Found movie 302946 (The Accountant) available on vidsrc.in
+[2025-05-12T13:29:21.634Z] [INFO] Upserted movie 986056 (Thunderbolts*) with availability: true
+[2025-05-12T13:29:21.636Z] [INFO] Upserted movie 897160 (Brave Citizen) with availability: true
+[2025-05-12T13:29:21.677Z] [INFO] Upserted movie 302946 (The Accountant) with availability: true
+[2025-05-12T13:29:24.276Z] [DEBUG] Checking movie 822119 (Captain America: Brave New World) on vidsrc.net
+[2025-05-12T13:29:24.282Z] [DEBUG] Checking movie 1153714 (Death of a Unicorn) on vidsrc.xyz
+[2025-05-12T13:29:24.287Z] [DEBUG] Checking movie 324544 (In the Lost Lands) on vidsrc.io
+[2025-05-12T13:29:24.293Z] [DEBUG] Checking movie 1359977 (Conjuring the Cult) on vidsrc.vc
+[2025-05-12T13:29:24.297Z] [DEBUG] Checking movie 668489 (Havoc) on vidsrc.me
+[2025-05-12T13:29:24.372Z] [DEBUG] Checking movie 345940 (The Meg) on vidsrc.in
+[2025-05-12T13:29:24.391Z] [DEBUG] Checking movie 419430 (Get Out) on vidsrc.pm
+[2025-05-12T13:29:24.395Z] [DEBUG] Checking movie 1225915 (Jewel Thief: The Heist Begins) on vidsrc.net
+[2025-05-12T13:29:24.751Z] [INFO] Found movie 1359977 (Conjuring the Cult) available on vidsrc.vc
+[2025-05-12T13:29:24.755Z] [INFO] Found movie 822119 (Captain America: Brave New World) available on vidsrc.net
+[2025-05-12T13:29:24.784Z] [DEBUG] Checking movie 1323784 (Bad Influence) on vidsrc.xyz
+[2025-05-12T13:29:24.796Z] [DEBUG] Checking movie 464052 (Wonder Woman 1984) on vidsrc.io
+[2025-05-12T13:29:24.822Z] [INFO] Found movie 324544 (In the Lost Lands) available on vidsrc.io
+[2025-05-12T13:29:24.824Z] [INFO] Found movie 1153714 (Death of a Unicorn) available on vidsrc.xyz
+[2025-05-12T13:29:24.846Z] [INFO] Upserted movie 1359977 (Conjuring the Cult) with availability: true
+[2025-05-12T13:29:24.851Z] [INFO] Upserted movie 822119 (Captain America: Brave New World) with availability: true
+[2025-05-12T13:29:24.858Z] [INFO] Found movie 1225915 (Jewel Thief: The Heist Begins) available on vidsrc.net
+[2025-05-12T13:29:24.874Z] [INFO] Found movie 419430 (Get Out) available on vidsrc.pm
+[2025-05-12T13:29:24.905Z] [INFO] Found movie 345940 (The Meg) available on vidsrc.in
+[2025-05-12T13:29:24.919Z] [INFO] Upserted movie 324544 (In the Lost Lands) with availability: true
+[2025-05-12T13:29:24.920Z] [INFO] Upserted movie 1153714 (Death of a Unicorn) with availability: true
+[2025-05-12T13:29:24.954Z] [INFO] Upserted movie 1225915 (Jewel Thief: The Heist Begins) with availability: true
+[2025-05-12T13:29:24.971Z] [INFO] Upserted movie 419430 (Get Out) with availability: true
+[2025-05-12T13:29:25.000Z] [INFO] Upserted movie 345940 (The Meg) with availability: true
+[2025-05-12T13:29:25.247Z] [WARNING] Rate limited on vidsrc.me, trying with proxy...
+[2025-05-12T13:29:25.247Z] [DEBUG] Using proxy 154.213.165.20:3128 for vidsrc.me
+[2025-05-12T13:29:25.281Z] [INFO] Found movie 464052 (Wonder Woman 1984) available on vidsrc.io
+[2025-05-12T13:29:25.291Z] [INFO] Found movie 1323784 (Bad Influence) available on vidsrc.xyz
+[2025-05-12T13:29:25.378Z] [INFO] Upserted movie 464052 (Wonder Woman 1984) with availability: true
+[2025-05-12T13:29:25.388Z] [INFO] Upserted movie 1323784 (Bad Influence) with availability: true
+[2025-05-12T13:29:26.352Z] [DEBUG] Checking movie 668489 (Havoc) on vidsrc.vc
+[2025-05-12T13:29:26.894Z] [INFO] Found movie 668489 (Havoc) available on vidsrc.vc
+[2025-05-12T13:29:26.990Z] [INFO] Upserted movie 668489 (Havoc) with availability: true
+[2025-05-12T13:29:29.491Z] [INFO] Progress saved: Page 1, Index 20
+[2025-05-12T13:29:29.491Z] [INFO] Processing page 2 of 50257
+[2025-05-12T13:29:30.092Z] [INFO] Fetched 20 movies from page 2
+[2025-05-12T13:29:30.193Z] [DEBUG] Checking movie 141052 (Justice League) on vidsrc.me
+[2025-05-12T13:29:30.199Z] [DEBUG] Checking movie 37135 (Tarzan) on vidsrc.in
+[2025-05-12T13:29:30.203Z] [DEBUG] Checking movie 1471014 (Van Gogh by Vincent) on vidsrc.pm
+[2025-05-12T13:29:30.207Z] [DEBUG] Checking movie 281338 (War for the Planet of the Apes) on vidsrc.net
+[2025-05-12T13:29:30.211Z] [DEBUG] Checking movie 1356236 (Saint Catherine) on vidsrc.xyz
+[2025-05-12T13:29:30.215Z] [DEBUG] Checking movie 1260820 (Stream) on vidsrc.io
+[2025-05-12T13:29:30.219Z] [DEBUG] Checking movie 263115 (Logan) on vidsrc.vc
+[2025-05-12T13:29:30.288Z] [DEBUG] Checking movie 1403735 (Laila) on vidsrc.me
+[2025-05-12T13:29:30.687Z] [INFO] Found movie 37135 (Tarzan) available on vidsrc.in
+[2025-05-12T13:29:30.692Z] [INFO] Found movie 263115 (Logan) available on vidsrc.vc
+[2025-05-12T13:29:30.697Z] [DEBUG] Checking movie 1124620 (The Monkey) on vidsrc.in
+[2025-05-12T13:29:30.713Z] [DEBUG] Checking movie 1233413 (Sinners) on vidsrc.pm
+[2025-05-12T13:29:30.722Z] [WARNING] Rate limited on vidsrc.net, trying with proxy...
+[2025-05-12T13:29:30.722Z] [DEBUG] Using proxy 156.242.34.42:3128 for vidsrc.net
+[2025-05-12T13:29:30.786Z] [INFO] Upserted movie 37135 (Tarzan) with availability: true
+[2025-05-12T13:29:30.788Z] [INFO] Upserted movie 263115 (Logan) with availability: true
+[2025-05-12T13:29:30.935Z] [DEBUG] Checking movie 1471014 (Van Gogh by Vincent) on vidsrc.net
+[2025-05-12T13:29:30.939Z] [DEBUG] Checking movie 1260820 (Stream) on vidsrc.xyz
+[2025-05-12T13:29:30.983Z] [DEBUG] Checking movie 1356236 (Saint Catherine) on vidsrc.io
+[2025-05-12T13:29:31.149Z] [INFO] Found movie 1124620 (The Monkey) available on vidsrc.in
+[2025-05-12T13:29:31.191Z] [INFO] Found movie 1233413 (Sinners) available on vidsrc.pm
+[2025-05-12T13:29:31.205Z] [WARNING] Rate limited on vidsrc.me, trying with proxy...
+[2025-05-12T13:29:31.205Z] [DEBUG] Using proxy 156.249.138.20:3128 for vidsrc.me
+[2025-05-12T13:29:31.208Z] [WARNING] Rate limited on vidsrc.me, trying with proxy...
+[2025-05-12T13:29:31.208Z] [DEBUG] Using proxy 156.233.92.28:3128 for vidsrc.me
+[2025-05-12T13:29:31.246Z] [INFO] Upserted movie 1124620 (The Monkey) with availability: true
+[2025-05-12T13:29:31.287Z] [INFO] Upserted movie 1233413 (Sinners) with availability: true
+[2025-05-12T13:29:31.396Z] [WARNING] Rate limited on vidsrc.net, trying with proxy...
+[2025-05-12T13:29:31.397Z] [DEBUG] Using proxy 156.233.84.24:3128 for vidsrc.net
+[2025-05-12T13:29:31.421Z] [DEBUG] Checking movie 281338 (War for the Planet of the Apes) on vidsrc.vc
+[2025-05-12T13:29:31.711Z] [DEBUG] Checking movie 1260820 (Stream) on vidsrc.me
+[2025-05-12T13:29:31.727Z] [DEBUG] Checking movie 1356236 (Saint Catherine) on vidsrc.in
+[2025-05-12T13:29:31.881Z] [INFO] Found movie 281338 (War for the Planet of the Apes) available on vidsrc.vc
+[2025-05-12T13:29:31.978Z] [INFO] Upserted movie 281338 (War for the Planet of the Apes) with availability: true
+[2025-05-12T13:29:32.150Z] [DEBUG] Checking movie 1471014 (Van Gogh by Vincent) on vidsrc.pm
+[2025-05-12T13:29:32.380Z] [DEBUG] Checking movie 141052 (Justice League) on vidsrc.net
+[2025-05-12T13:29:32.456Z] [DEBUG] Checking movie 1403735 (Laila) on vidsrc.xyz
+[2025-05-12T13:29:32.474Z] [DEBUG] Checking movie 1356236 (Saint Catherine) on vidsrc.io
+[2025-05-12T13:29:32.666Z] [WARNING] Rate limited on vidsrc.me, trying with proxy...
+[2025-05-12T13:29:32.667Z] [DEBUG] Using proxy 156.253.176.141:3128 for vidsrc.me
+[2025-05-12T13:29:32.878Z] [WARNING] Rate limited on vidsrc.net, trying with proxy...
+[2025-05-12T13:29:32.878Z] [DEBUG] Using proxy 156.228.76.219:3128 for vidsrc.net
+[2025-05-12T13:29:32.933Z] [DEBUG] Checking movie 1471014 (Van Gogh by Vincent) on vidsrc.vc
+[2025-05-12T13:29:33.155Z] [DEBUG] Checking movie 1403735 (Laila) on vidsrc.me
+[2025-05-12T13:29:33.235Z] [DEBUG] Checking movie 1356236 (Saint Catherine) on vidsrc.in
+[2025-05-12T13:29:33.621Z] [DEBUG] Checking movie 141052 (Justice League) on vidsrc.pm
+[2025-05-12T13:29:33.645Z] [DEBUG] Checking movie 1471014 (Van Gogh by Vincent) on vidsrc.net
+[2025-05-12T13:29:33.789Z] [DEBUG] Checking movie 1260820 (Stream) on vidsrc.xyz
+[2025-05-12T13:29:33.969Z] [DEBUG] Checking movie 1356236 (Saint Catherine) on vidsrc.io
+[2025-05-12T13:29:34.049Z] [WARNING] Rate limited on vidsrc.me, trying with proxy...
+[2025-05-12T13:29:34.049Z] [DEBUG] Using proxy 156.242.40.3:3128 for vidsrc.me
+[2025-05-12T13:29:34.097Z] [WARNING] Rate limited on vidsrc.net, trying with proxy...
+[2025-05-12T13:29:34.097Z] [DEBUG] Using proxy 154.213.202.112:3128 for vidsrc.net
+[2025-05-12T13:29:34.104Z] [INFO] Found movie 141052 (Justice League) available on vidsrc.pm
+[2025-05-12T13:29:34.201Z] [INFO] Upserted movie 141052 (Justice League) with availability: true
+[2025-05-12T13:29:34.523Z] [DEBUG] Checking movie 1260820 (Stream) on vidsrc.vc
+[2025-05-12T13:29:34.677Z] [DEBUG] Checking movie 1356236 (Saint Catherine) on vidsrc.me
+[2025-05-12T13:29:34.788Z] [DEBUG] Checking movie 1471014 (Van Gogh by Vincent) on vidsrc.in
+[2025-05-12T13:29:35.231Z] [DEBUG] Checking movie 1403735 (Laila) on vidsrc.pm
+[2025-05-12T13:29:35.257Z] [DEBUG] Checking movie 1260820 (Stream) on vidsrc.net
+[2025-05-12T13:29:35.295Z] [WARNING] Rate limited on vidsrc.in, trying with proxy...
+[2025-05-12T13:29:35.295Z] [DEBUG] Using proxy 154.213.167.104:3128 for vidsrc.in
+[2025-05-12T13:29:35.694Z] [WARNING] Rate limited on vidsrc.pm, trying with proxy...
+[2025-05-12T13:29:35.695Z] [DEBUG] Using proxy 154.94.13.245:3128 for vidsrc.pm
+[2025-05-12T13:29:35.885Z] [DEBUG] Checking movie 1356236 (Saint Catherine) on vidsrc.xyz
+[2025-05-12T13:29:35.962Z] [DEBUG] Checking movie 1260820 (Stream) on vidsrc.io
+[2025-05-12T13:29:35.990Z] [DEBUG] Checking movie 1471014 (Van Gogh by Vincent) on vidsrc.vc
+[2025-05-12T13:29:36.338Z] [WARNING] Rate limited on vidsrc.xyz, trying with proxy...
+[2025-05-12T13:29:36.338Z] [DEBUG] Using proxy 154.213.199.24:3128 for vidsrc.xyz
+[2025-05-12T13:29:36.398Z] [DEBUG] Checking movie 1403735 (Laila) on vidsrc.me
+[2025-05-12T13:29:36.428Z] [WARNING] Rate limited on vidsrc.io, trying with proxy...
+[2025-05-12T13:29:36.428Z] [DEBUG] Using proxy 156.242.47.132:3128 for vidsrc.io
+[2025-05-12T13:29:36.438Z] [WARNING] Rate limited on vidsrc.vc, trying with proxy...
+[2025-05-12T13:29:36.438Z] [DEBUG] Using proxy 156.228.114.150:3128 for vidsrc.vc
+[2025-05-12T13:29:37.096Z] [DEBUG] Checking movie 1356236 (Saint Catherine) on vidsrc.in
+[2025-05-12T13:29:37.141Z] [DEBUG] Checking movie 1260820 (Stream) on vidsrc.pm
+[2025-05-12T13:29:37.153Z] [DEBUG] Checking movie 1471014 (Van Gogh by Vincent) on vidsrc.net
+[2025-05-12T13:29:37.549Z] [WARNING] Rate limited on vidsrc.in, trying with proxy...
+[2025-05-12T13:29:37.549Z] [DEBUG] Using proxy 156.228.79.145:3128 for vidsrc.in
+[2025-05-12T13:29:37.609Z] [WARNING] Rate limited on vidsrc.net, trying with proxy...
+[2025-05-12T13:29:37.609Z] [DEBUG] Using proxy 154.213.165.20:3128 for vidsrc.net
+[2025-05-12T13:29:37.628Z] [DEBUG] Checking movie 1403735 (Laila) on vidsrc.xyz
+[2025-05-12T13:29:37.702Z] [WARNING] Rate limited on vidsrc.pm, trying with proxy...
+[2025-05-12T13:29:37.702Z] [DEBUG] Using proxy 156.242.34.42:3128 for vidsrc.pm
+[2025-05-12T13:29:38.074Z] [WARNING] Rate limited on vidsrc.xyz, trying with proxy...
+[2025-05-12T13:29:38.074Z] [DEBUG] Using proxy 156.249.138.20:3128 for vidsrc.xyz
+[2025-05-12T13:29:38.302Z] [DEBUG] Checking movie 1471014 (Van Gogh by Vincent) on vidsrc.io
+[2025-05-12T13:29:38.306Z] [DEBUG] Checking movie 1356236 (Saint Catherine) on vidsrc.vc
+[2025-05-12T13:29:38.409Z] [DEBUG] Checking movie 1260820 (Stream) on vidsrc.me
+[2025-05-12T13:29:38.755Z] [WARNING] Rate limited on vidsrc.vc, trying with proxy...
+[2025-05-12T13:29:38.755Z] [DEBUG] Using proxy 156.233.92.28:3128 for vidsrc.vc
+[2025-05-12T13:29:38.768Z] [WARNING] Rate limited on vidsrc.io, trying with proxy...
+[2025-05-12T13:29:38.768Z] [DEBUG] Using proxy 156.233.84.24:3128 for vidsrc.io
+[2025-05-12T13:29:38.771Z] [DEBUG] Checking movie 1403735 (Laila) on vidsrc.in
+[2025-05-12T13:29:39.225Z] [WARNING] Rate limited on vidsrc.in, trying with proxy...
+[2025-05-12T13:29:39.226Z] [DEBUG] Using proxy 156.253.176.141:3128 for vidsrc.in
+[2025-05-12T13:29:39.368Z] [WARNING] Rate limited on vidsrc.me, trying with proxy...
+[2025-05-12T13:29:39.368Z] [DEBUG] Using proxy 156.228.76.219:3128 for vidsrc.me
+[2025-05-12T13:29:39.445Z] [DEBUG] Checking movie 1356236 (Saint Catherine) on vidsrc.pm
+[2025-05-12T13:29:39.482Z] [DEBUG] Checking movie 1471014 (Van Gogh by Vincent) on vidsrc.net
+[2025-05-12T13:29:39.905Z] [WARNING] Rate limited on vidsrc.net, trying with proxy...
+[2025-05-12T13:29:39.906Z] [DEBUG] Using proxy 156.242.40.3:3128 for vidsrc.net
+[2025-05-12T13:29:39.913Z] [WARNING] Rate limited on vidsrc.pm, trying with proxy...
+[2025-05-12T13:29:39.914Z] [DEBUG] Using proxy 154.213.202.112:3128 for vidsrc.pm
+[2025-05-12T13:29:39.930Z] [DEBUG] Checking movie 1403735 (Laila) on vidsrc.xyz
+[2025-05-12T13:29:40.388Z] [WARNING] Rate limited on vidsrc.xyz, trying with proxy...
+[2025-05-12T13:29:40.388Z] [DEBUG] Using proxy 154.213.167.104:3128 for vidsrc.xyz
+[2025-05-12T13:29:40.503Z] [DEBUG] Checking movie 1260820 (Stream) on vidsrc.io
+[2025-05-12T13:29:40.670Z] [DEBUG] Checking movie 1471014 (Van Gogh by Vincent) on vidsrc.vc
+[2025-05-12T13:29:40.682Z] [DEBUG] Checking movie 1356236 (Saint Catherine) on vidsrc.me
+[2025-05-12T13:29:41.011Z] [WARNING] Rate limited on vidsrc.io, trying with proxy...
+[2025-05-12T13:29:41.011Z] [DEBUG] Using proxy 154.94.13.245:3128 for vidsrc.io
+[2025-05-12T13:29:41.081Z] [DEBUG] Checking movie 1403735 (Laila) on vidsrc.in
+[2025-05-12T13:29:41.133Z] [WARNING] Rate limited on vidsrc.vc, trying with proxy...
+[2025-05-12T13:29:41.134Z] [DEBUG] Using proxy 154.213.199.24:3128 for vidsrc.vc
+[2025-05-12T13:29:41.521Z] [WARNING] Rate limited on vidsrc.in, trying with proxy...
+[2025-05-12T13:29:41.521Z] [DEBUG] Using proxy 156.242.47.132:3128 for vidsrc.in
+[2025-05-12T13:29:41.603Z] [WARNING] Rate limited on vidsrc.me, trying with proxy...
+[2025-05-12T13:29:41.603Z] [DEBUG] Using proxy 156.228.114.150:3128 for vidsrc.me
+[2025-05-12T13:29:41.703Z] [DEBUG] Checking movie 1260820 (Stream) on vidsrc.pm
+[2025-05-12T13:29:41.834Z] [DEBUG] Checking movie 1471014 (Van Gogh by Vincent) on vidsrc.net
+[2025-05-12T13:29:42.162Z] [WARNING] Rate limited on vidsrc.pm, trying with proxy...
+[2025-05-12T13:29:42.163Z] [DEBUG] Using proxy 156.228.79.145:3128 for vidsrc.pm
+[2025-05-12T13:29:42.216Z] [DEBUG] Checking movie 1403735 (Laila) on vidsrc.xyz
+[2025-05-12T13:29:42.285Z] [WARNING] Rate limited on vidsrc.net, trying with proxy...
+[2025-05-12T13:29:42.286Z] [DEBUG] Using proxy 154.213.165.20:3128 for vidsrc.net
+[2025-05-12T13:29:42.666Z] [WARNING] Rate limited on vidsrc.xyz, trying with proxy...
+[2025-05-12T13:29:42.666Z] [DEBUG] Using proxy 156.242.34.42:3128 for vidsrc.xyz
+[2025-05-12T13:29:42.738Z] [DEBUG] Checking movie 1356236 (Saint Catherine) on vidsrc.io
+[2025-05-12T13:29:42.921Z] [DEBUG] Checking movie 1260820 (Stream) on vidsrc.vc
+[2025-05-12T13:29:42.975Z] [DEBUG] Checking movie 1471014 (Van Gogh by Vincent) on vidsrc.me
+[2025-05-12T13:29:43.231Z] [WARNING] Rate limited on vidsrc.io, trying with proxy...
+[2025-05-12T13:29:43.231Z] [DEBUG] Using proxy 156.249.138.20:3128 for vidsrc.io
+[2025-05-12T13:29:43.368Z] [DEBUG] Checking movie 1403735 (Laila) on vidsrc.in
+[2025-05-12T13:29:43.385Z] [WARNING] Rate limited on vidsrc.vc, trying with proxy...
+[2025-05-12T13:29:43.385Z] [DEBUG] Using proxy 156.233.92.28:3128 for vidsrc.vc
+[2025-05-12T13:29:43.840Z] [WARNING] Rate limited on vidsrc.me, trying with proxy...
+[2025-05-12T13:29:43.840Z] [DEBUG] Using proxy 156.233.84.24:3128 for vidsrc.me
+[2025-05-12T13:29:43.871Z] [WARNING] Rate limited on vidsrc.in, trying with proxy...
+[2025-05-12T13:29:43.871Z] [DEBUG] Using proxy 156.253.176.141:3128 for vidsrc.in
+[2025-05-12T13:29:43.981Z] [DEBUG] Checking movie 1356236 (Saint Catherine) on vidsrc.pm
+[2025-05-12T13:29:44.141Z] [DEBUG] Checking movie 1260820 (Stream) on vidsrc.net
+[2025-05-12T13:29:44.432Z] [WARNING] Rate limited on vidsrc.pm, trying with proxy...
+[2025-05-12T13:29:44.432Z] [DEBUG] Using proxy 156.228.76.219:3128 for vidsrc.pm
+[2025-05-12T13:29:44.562Z] [DEBUG] Checking movie 1403735 (Laila) on vidsrc.xyz
+[2025-05-12T13:29:44.593Z] [WARNING] Rate limited on vidsrc.net, trying with proxy...
+[2025-05-12T13:29:44.593Z] [DEBUG] Using proxy 156.242.40.3:3128 for vidsrc.net
+[2025-05-12T13:29:44.968Z] [INFO] Upserted movie 1356236 (Saint Catherine) with availability: false
+[2025-05-12T13:29:45.015Z] [WARNING] Rate limited on vidsrc.xyz, trying with proxy...
+[2025-05-12T13:29:45.015Z] [DEBUG] Using proxy 154.213.202.112:3128 for vidsrc.xyz
+[2025-05-12T13:29:45.044Z] [DEBUG] Checking movie 1471014 (Van Gogh by Vincent) on vidsrc.io
+[2025-05-12T13:29:45.355Z] [DEBUG] Checking movie 1260820 (Stream) on vidsrc.vc
+[2025-05-12T13:29:45.506Z] [WARNING] Rate limited on vidsrc.io, trying with proxy...
+[2025-05-12T13:29:45.506Z] [DEBUG] Using proxy 154.213.167.104:3128 for vidsrc.io
+[2025-05-12T13:29:45.792Z] [WARNING] Rate limited on vidsrc.vc, trying with proxy...
+[2025-05-12T13:29:45.792Z] [DEBUG] Using proxy 154.94.13.245:3128 for vidsrc.vc
+[2025-05-12T13:29:45.837Z] [DEBUG] Checking movie 1403735 (Laila) on vidsrc.me
+[2025-05-12T13:29:46.057Z] [INFO] Upserted movie 1471014 (Van Gogh by Vincent) with availability: false
+[2025-05-12T13:29:46.373Z] [INFO] Upserted movie 1260820 (Stream) with availability: false
+[2025-05-12T13:29:46.710Z] [WARNING] Rate limited on vidsrc.me, trying with proxy...
+[2025-05-12T13:29:46.710Z] [DEBUG] Using proxy 154.213.199.24:3128 for vidsrc.me
+[2025-05-12T13:29:47.927Z] [DEBUG] Checking movie 1403735 (Laila) on vidsrc.in
+[2025-05-12T13:29:48.511Z] [INFO] Upserted movie 1403735 (Laila) with availability: false
+[2025-05-12T13:29:51.104Z] [DEBUG] Checking movie 126889 (Alien: Covenant) on vidsrc.pm
+[2025-05-12T13:29:51.106Z] [DEBUG] Checking movie 370172 (No Time to Die) on vidsrc.net
+[2025-05-12T13:29:51.107Z] [DEBUG] Checking movie 324786 (Hacksaw Ridge) on vidsrc.xyz
+[2025-05-12T13:29:51.109Z] [DEBUG] Checking movie 974573 (Another Simple Favor) on vidsrc.io
+[2025-05-12T13:29:51.110Z] [DEBUG] Checking movie 1241982 (Moana 2) on vidsrc.vc
+[2025-05-12T13:29:51.111Z] [DEBUG] Checking movie 574475 (Final Destination Bloodlines) on vidsrc.me
+[2025-05-12T13:29:51.112Z] [DEBUG] Checking movie 383498 (Deadpool 2) on vidsrc.in
+[2025-05-12T13:29:51.113Z] [DEBUG] Checking movie 315837 (Ghost in the Shell) on vidsrc.pm
+[2025-05-12T13:29:51.114Z] [DEBUG] Checking movie 974576 (Conclave) on vidsrc.net
+[2025-05-12T13:29:51.563Z] [INFO] Found movie 315837 (Ghost in the Shell) available on vidsrc.pm
+[2025-05-12T13:29:51.581Z] [INFO] Found movie 324786 (Hacksaw Ridge) available on vidsrc.xyz
+[2025-05-12T13:29:51.586Z] [INFO] Found movie 370172 (No Time to Die) available on vidsrc.net
+[2025-05-12T13:29:51.591Z] [INFO] Found movie 126889 (Alien: Covenant) available on vidsrc.pm
+[2025-05-12T13:29:51.596Z] [INFO] Found movie 383498 (Deadpool 2) available on vidsrc.in
+[2025-05-12T13:29:51.614Z] [DEBUG] Checking movie 1414048 (Day of Reckoning) on vidsrc.xyz
+[2025-05-12T13:29:51.631Z] [INFO] Found movie 974576 (Conclave) available on vidsrc.net
+[2025-05-12T13:29:51.641Z] [INFO] Found movie 974573 (Another Simple Favor) available on vidsrc.io
+[2025-05-12T13:29:51.664Z] [INFO] Upserted movie 315837 (Ghost in the Shell) with availability: true
+[2025-05-12T13:29:51.677Z] [INFO] Upserted movie 324786 (Hacksaw Ridge) with availability: true
+[2025-05-12T13:29:51.686Z] [INFO] Upserted movie 370172 (No Time to Die) with availability: true
+[2025-05-12T13:29:51.689Z] [INFO] Upserted movie 126889 (Alien: Covenant) with availability: true
+[2025-05-12T13:29:51.693Z] [INFO] Upserted movie 383498 (Deadpool 2) with availability: true
+[2025-05-12T13:29:51.704Z] [INFO] Found movie 1241982 (Moana 2) available on vidsrc.vc
+[2025-05-12T13:29:51.726Z] [INFO] Upserted movie 974576 (Conclave) with availability: true
+[2025-05-12T13:29:51.737Z] [INFO] Upserted movie 974573 (Another Simple Favor) with availability: true
+[2025-05-12T13:29:51.799Z] [INFO] Upserted movie 1241982 (Moana 2) with availability: true
+[2025-05-12T13:29:52.010Z] [INFO] Found movie 574475 (Final Destination Bloodlines) available on vidsrc.me
+[2025-05-12T13:29:52.107Z] [INFO] Upserted movie 574475 (Final Destination Bloodlines) with availability: true
+[2025-05-12T13:29:52.339Z] [DEBUG] Checking movie 1414048 (Day of Reckoning) on vidsrc.io
+[2025-05-12T13:29:53.114Z] [DEBUG] Checking movie 1414048 (Day of Reckoning) on vidsrc.vc
+[2025-05-12T13:29:53.876Z] [DEBUG] Checking movie 1414048 (Day of Reckoning) on vidsrc.me
+[2025-05-12T13:29:55.043Z] [DEBUG] Checking movie 1414048 (Day of Reckoning) on vidsrc.in
+[2025-05-12T13:29:55.773Z] [DEBUG] Checking movie 1414048 (Day of Reckoning) on vidsrc.pm
+[2025-05-12T13:29:56.482Z] [DEBUG] Checking movie 1414048 (Day of Reckoning) on vidsrc.net
+[2025-05-12T13:29:57.199Z] [DEBUG] Checking movie 1414048 (Day of Reckoning) on vidsrc.xyz
+[2025-05-12T13:29:57.916Z] [DEBUG] Checking movie 1414048 (Day of Reckoning) on vidsrc.io
+[2025-05-12T13:29:58.615Z] [DEBUG] Checking movie 1414048 (Day of Reckoning) on vidsrc.vc
+[2025-05-12T13:29:59.388Z] [DEBUG] Checking movie 1414048 (Day of Reckoning) on vidsrc.me
+[2025-05-12T13:30:00.667Z] [DEBUG] Checking movie 1414048 (Day of Reckoning) on vidsrc.in
+[2025-05-12T13:30:01.408Z] [DEBUG] Checking movie 1414048 (Day of Reckoning) on vidsrc.pm
+[2025-05-12T13:30:02.113Z] [DEBUG] Checking movie 1414048 (Day of Reckoning) on vidsrc.net
+[2025-05-12T13:30:02.670Z] [INFO] Upserted movie 1414048 (Day of Reckoning) with availability: false
+[2025-05-12T13:30:05.171Z] [INFO] Progress saved: Page 2, Index 20
+[2025-05-12T13:30:05.171Z] [INFO] Processing page 3 of 50257
+[2025-05-12T13:30:05.741Z] [INFO] Fetched 20 movies from page 3
+[2025-05-12T13:30:05.835Z] [DEBUG] Checking movie 458156 (John Wick: Chapter 3 - Parabellum) on vidsrc.xyz
+[2025-05-12T13:30:05.837Z] [DEBUG] Checking movie 1136721 (The Glenarma Tapes) on vidsrc.io
+[2025-05-12T13:30:05.838Z] [DEBUG] Checking movie 1180906 (Desert Dawn) on vidsrc.vc
+[2025-05-12T13:30:05.839Z] [DEBUG] Checking movie 1011477 (Karate Kid: Legends) on vidsrc.me
+[2025-05-12T13:30:05.840Z] [DEBUG] Checking movie 395834 (Wind River) on vidsrc.in
+[2025-05-12T13:30:05.841Z] [DEBUG] Checking movie 353491 (The Dark Tower) on vidsrc.pm
+[2025-05-12T13:30:05.842Z] [DEBUG] Checking movie 1151039 (Nonnas) on vidsrc.net
+[2025-05-12T13:30:05.844Z] [DEBUG] Checking movie 402 (Basic Instinct) on vidsrc.xyz
+[2025-05-12T13:30:05.845Z] [DEBUG] Checking movie 497698 (Black Widow) on vidsrc.io
+[2025-05-12T13:30:05.846Z] [DEBUG] Checking movie 238 (The Godfather) on vidsrc.vc
+[2025-05-12T13:30:06.306Z] [INFO] Found movie 458156 (John Wick: Chapter 3 - Parabellum) available on vidsrc.xyz
+[2025-05-12T13:30:06.310Z] [INFO] Found movie 395834 (Wind River) available on vidsrc.in
+[2025-05-12T13:30:06.332Z] [INFO] Found movie 497698 (Black Widow) available on vidsrc.io
+[2025-05-12T13:30:06.336Z] [INFO] Found movie 402 (Basic Instinct) available on vidsrc.xyz
+[2025-05-12T13:30:06.345Z] [INFO] Found movie 238 (The Godfather) available on vidsrc.vc
+[2025-05-12T13:30:06.353Z] [INFO] Found movie 1151039 (Nonnas) available on vidsrc.net
+[2025-05-12T13:30:06.364Z] [INFO] Found movie 353491 (The Dark Tower) available on vidsrc.pm
+[2025-05-12T13:30:06.403Z] [INFO] Upserted movie 458156 (John Wick: Chapter 3 - Parabellum) with availability: true
+[2025-05-12T13:30:06.407Z] [INFO] Upserted movie 395834 (Wind River) with availability: true
+[2025-05-12T13:30:06.428Z] [INFO] Upserted movie 497698 (Black Widow) with availability: true
+[2025-05-12T13:30:06.432Z] [INFO] Upserted movie 402 (Basic Instinct) with availability: true
+[2025-05-12T13:30:06.441Z] [INFO] Upserted movie 238 (The Godfather) with availability: true
+[2025-05-12T13:30:06.449Z] [INFO] Upserted movie 1151039 (Nonnas) with availability: true
+[2025-05-12T13:30:06.459Z] [INFO] Upserted movie 353491 (The Dark Tower) with availability: true
+[2025-05-12T13:30:06.542Z] [DEBUG] Checking movie 1136721 (The Glenarma Tapes) on vidsrc.me
+[2025-05-12T13:30:06.550Z] [DEBUG] Checking movie 1180906 (Desert Dawn) on vidsrc.in
+[2025-05-12T13:30:06.780Z] [INFO] Found movie 1011477 (Karate Kid: Legends) available on vidsrc.me
+[2025-05-12T13:30:06.878Z] [INFO] Upserted movie 1011477 (Karate Kid: Legends) with availability: true
+[2025-05-12T13:30:07.320Z] [DEBUG] Checking movie 1180906 (Desert Dawn) on vidsrc.pm
+[2025-05-12T13:30:07.429Z] [WARNING] Rate limited on vidsrc.me, trying with proxy...
+[2025-05-12T13:30:07.430Z] [DEBUG] Using proxy 156.242.47.132:3128 for vidsrc.me
+[2025-05-12T13:30:08.053Z] [DEBUG] Checking movie 1180906 (Desert Dawn) on vidsrc.net
+[2025-05-12T13:30:08.488Z] [WARNING] Rate limited on vidsrc.net, trying with proxy...
+[2025-05-12T13:30:08.489Z] [DEBUG] Using proxy 156.228.114.150:3128 for vidsrc.net
+[2025-05-12T13:30:08.618Z] [DEBUG] Checking movie 1136721 (The Glenarma Tapes) on vidsrc.xyz
+[2025-05-12T13:30:09.179Z] [DEBUG] Checking movie 1180906 (Desert Dawn) on vidsrc.io
+[2025-05-12T13:30:09.442Z] [DEBUG] Checking movie 1136721 (The Glenarma Tapes) on vidsrc.vc
+[2025-05-12T13:30:09.964Z] [DEBUG] Checking movie 1180906 (Desert Dawn) on vidsrc.me
+[2025-05-12T13:30:10.169Z] [DEBUG] Checking movie 1136721 (The Glenarma Tapes) on vidsrc.in
+[2025-05-12T13:30:10.844Z] [WARNING] Rate limited on vidsrc.me, trying with proxy...
+[2025-05-12T13:30:10.845Z] [DEBUG] Using proxy 156.228.79.145:3128 for vidsrc.me
+[2025-05-12T13:30:10.901Z] [DEBUG] Checking movie 1136721 (The Glenarma Tapes) on vidsrc.pm
+[2025-05-12T13:30:11.621Z] [DEBUG] Checking movie 1136721 (The Glenarma Tapes) on vidsrc.net
+[2025-05-12T13:30:12.058Z] [DEBUG] Checking movie 1180906 (Desert Dawn) on vidsrc.xyz
+[2025-05-12T13:30:12.064Z] [WARNING] Rate limited on vidsrc.net, trying with proxy...
+[2025-05-12T13:30:12.064Z] [DEBUG] Using proxy 154.213.165.20:3128 for vidsrc.net
+[2025-05-12T13:30:12.756Z] [DEBUG] Checking movie 1136721 (The Glenarma Tapes) on vidsrc.io
+[2025-05-12T13:30:12.762Z] [DEBUG] Checking movie 1180906 (Desert Dawn) on vidsrc.vc
+[2025-05-12T13:30:13.480Z] [DEBUG] Checking movie 1180906 (Desert Dawn) on vidsrc.me
+[2025-05-12T13:30:13.545Z] [DEBUG] Checking movie 1136721 (The Glenarma Tapes) on vidsrc.in
+[2025-05-12T13:30:14.256Z] [DEBUG] Checking movie 1136721 (The Glenarma Tapes) on vidsrc.pm
+[2025-05-12T13:30:14.384Z] [WARNING] Rate limited on vidsrc.me, trying with proxy...
+[2025-05-12T13:30:14.384Z] [DEBUG] Using proxy 156.242.34.42:3128 for vidsrc.me
+[2025-05-12T13:30:14.990Z] [DEBUG] Checking movie 1136721 (The Glenarma Tapes) on vidsrc.net
+[2025-05-12T13:30:15.457Z] [WARNING] Rate limited on vidsrc.net, trying with proxy...
+[2025-05-12T13:30:15.457Z] [DEBUG] Using proxy 156.249.138.20:3128 for vidsrc.net
+[2025-05-12T13:30:15.600Z] [DEBUG] Checking movie 1180906 (Desert Dawn) on vidsrc.xyz
+[2025-05-12T13:30:16.163Z] [DEBUG] Checking movie 1136721 (The Glenarma Tapes) on vidsrc.io
+[2025-05-12T13:30:16.368Z] [DEBUG] Checking movie 1180906 (Desert Dawn) on vidsrc.vc
+[2025-05-12T13:30:16.889Z] [DEBUG] Checking movie 1136721 (The Glenarma Tapes) on vidsrc.me
+[2025-05-12T13:30:17.129Z] [DEBUG] Checking movie 1180906 (Desert Dawn) on vidsrc.in
+[2025-05-12T13:30:17.856Z] [DEBUG] Checking movie 1180906 (Desert Dawn) on vidsrc.pm
+[2025-05-12T13:30:18.009Z] [DEBUG] Checking movie 1136721 (The Glenarma Tapes) on vidsrc.net
+[2025-05-12T13:30:18.574Z] [INFO] Upserted movie 1136721 (The Glenarma Tapes) with availability: false
+[2025-05-12T13:30:18.649Z] [DEBUG] Checking movie 1180906 (Desert Dawn) on vidsrc.xyz
+[2025-05-12T13:30:19.194Z] [INFO] Upserted movie 1180906 (Desert Dawn) with availability: false
+[2025-05-12T13:30:21.790Z] [DEBUG] Checking movie 453395 (Doctor Strange in the Multiverse of Madness) on vidsrc.io
+[2025-05-12T13:30:21.793Z] [DEBUG] Checking movie 395990 (Death Wish) on vidsrc.vc
+[2025-05-12T13:30:21.795Z] [DEBUG] Checking movie 872585 (Oppenheimer) on vidsrc.me
+[2025-05-12T13:30:21.798Z] [DEBUG] Checking movie 384018 (Fast & Furious Presents: Hobbs & Shaw) on vidsrc.in
+[2025-05-12T13:30:21.800Z] [DEBUG] Checking movie 181812 (Star Wars: The Rise of Skywalker) on vidsrc.pm
+[2025-05-12T13:30:21.803Z] [DEBUG] Checking movie 353081 (Mission: Impossible - Fallout) on vidsrc.net
+[2025-05-12T13:30:21.805Z] [DEBUG] Checking movie 1276073 (Bullet Train Explosion) on vidsrc.xyz
+[2025-05-12T13:30:21.807Z] [DEBUG] Checking movie 939243 (Sonic the Hedgehog 3) on vidsrc.io
+[2025-05-12T13:30:21.809Z] [DEBUG] Checking movie 762509 (Mufasa: The Lion King) on vidsrc.vc
+[2025-05-12T13:30:21.811Z] [DEBUG] Checking movie 1092899 (The Siege) on vidsrc.me

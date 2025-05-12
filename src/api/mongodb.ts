@@ -132,7 +132,7 @@ export async function updateTVShowSeasonData(tvId: number, seasons: Season[]) {
     // Store season data with episode counts
     const seasonsData = seasons.map(season => ({
       seasonNumber: season.season_number,
-      episodeCount: season.episode_count,
+      episodeCount: season.episode_count || 0, // Provide default value of 0 when undefined
       available: true,
       lastChecked: now
     }));
@@ -166,7 +166,7 @@ export async function bulkUpdateTVShowSeasonData(data: Array<{tvId: number, seas
     const bulkOps = data.map(item => {
       const seasonsData = item.seasons.map(season => ({
         seasonNumber: season.season_number,
-        episodeCount: season.episode_count,
+        episodeCount: season.episode_count || 0, // Provide default value of 0 when undefined
         available: true,
         lastChecked: now
       }));

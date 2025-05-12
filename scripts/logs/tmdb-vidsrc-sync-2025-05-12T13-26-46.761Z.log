@@ -1,0 +1,398 @@
+[2025-05-12T13:26:46.771Z] [INFO] Initializing TMDB to VidSrc Movie Sync...
+[2025-05-12T13:26:46.772Z] [INFO] Options: startPage=1, dryRun=false, concurrency=10
+[2025-05-12T13:26:47.766Z] [INFO] Connected to MongoDB successfully
+[2025-05-12T13:26:47.766Z] [INFO] Resuming from progress: Page 4345, Index 0
+[2025-05-12T13:26:47.766Z] [INFO] Processing page 4345 of 50257
+[2025-05-12T13:26:48.389Z] [ERROR] Failed to fetch movies from page 4345: AxiosError: Request failed with status code 400
+[2025-05-12T13:26:48.389Z] [INFO] Progress saved: Page 4345, Index 0
+[2025-05-12T13:26:48.389Z] [INFO] Processing page 4346 of 50257
+[2025-05-12T13:26:48.627Z] [ERROR] Failed to fetch movies from page 4346: AxiosError: Request failed with status code 400
+[2025-05-12T13:26:48.628Z] [INFO] Progress saved: Page 4346, Index 0
+[2025-05-12T13:26:48.629Z] [INFO] Processing page 4347 of 50257
+[2025-05-12T13:26:48.896Z] [ERROR] Failed to fetch movies from page 4347: AxiosError: Request failed with status code 400
+[2025-05-12T13:26:48.897Z] [INFO] Progress saved: Page 4347, Index 0
+[2025-05-12T13:26:48.897Z] [INFO] Processing page 4348 of 50257
+[2025-05-12T13:26:49.165Z] [ERROR] Failed to fetch movies from page 4348: AxiosError: Request failed with status code 400
+[2025-05-12T13:26:49.165Z] [INFO] Progress saved: Page 4348, Index 0
+[2025-05-12T13:26:49.165Z] [INFO] Processing page 4349 of 50257
+[2025-05-12T13:26:49.425Z] [ERROR] Failed to fetch movies from page 4349: AxiosError: Request failed with status code 400
+[2025-05-12T13:26:49.426Z] [INFO] Progress saved: Page 4349, Index 0
+[2025-05-12T13:26:49.426Z] [INFO] Processing page 4350 of 50257
+[2025-05-12T13:26:49.684Z] [ERROR] Failed to fetch movies from page 4350: AxiosError: Request failed with status code 400
+[2025-05-12T13:26:49.684Z] [INFO] Progress saved: Page 4350, Index 0
+[2025-05-12T13:26:49.684Z] [INFO] Processing page 4351 of 50257
+[2025-05-12T13:26:49.940Z] [ERROR] Failed to fetch movies from page 4351: AxiosError: Request failed with status code 400
+[2025-05-12T13:26:49.944Z] [INFO] Progress saved: Page 4351, Index 0
+[2025-05-12T13:26:49.944Z] [INFO] Processing page 4352 of 50257
+[2025-05-12T13:26:50.202Z] [ERROR] Failed to fetch movies from page 4352: AxiosError: Request failed with status code 400
+[2025-05-12T13:26:50.202Z] [INFO] Progress saved: Page 4352, Index 0
+[2025-05-12T13:26:50.202Z] [INFO] Processing page 4353 of 50257
+[2025-05-12T13:26:50.469Z] [ERROR] Failed to fetch movies from page 4353: AxiosError: Request failed with status code 400
+[2025-05-12T13:26:50.470Z] [INFO] Progress saved: Page 4353, Index 0
+[2025-05-12T13:26:50.470Z] [INFO] Processing page 4354 of 50257
+[2025-05-12T13:26:50.724Z] [ERROR] Failed to fetch movies from page 4354: AxiosError: Request failed with status code 400
+[2025-05-12T13:26:50.724Z] [INFO] Progress saved: Page 4354, Index 0
+[2025-05-12T13:26:50.724Z] [INFO] Processing page 4355 of 50257
+[2025-05-12T13:26:50.979Z] [ERROR] Failed to fetch movies from page 4355: AxiosError: Request failed with status code 400
+[2025-05-12T13:26:50.981Z] [INFO] Progress saved: Page 4355, Index 0
+[2025-05-12T13:26:50.981Z] [INFO] Processing page 4356 of 50257
+[2025-05-12T13:26:51.238Z] [ERROR] Failed to fetch movies from page 4356: AxiosError: Request failed with status code 400
+[2025-05-12T13:26:51.239Z] [INFO] Progress saved: Page 4356, Index 0
+[2025-05-12T13:26:51.239Z] [INFO] Processing page 4357 of 50257
+[2025-05-12T13:26:51.495Z] [ERROR] Failed to fetch movies from page 4357: AxiosError: Request failed with status code 400
+[2025-05-12T13:26:51.495Z] [INFO] Progress saved: Page 4357, Index 0
+[2025-05-12T13:26:51.495Z] [INFO] Processing page 4358 of 50257
+[2025-05-12T13:26:51.748Z] [ERROR] Failed to fetch movies from page 4358: AxiosError: Request failed with status code 400
+[2025-05-12T13:26:51.749Z] [INFO] Progress saved: Page 4358, Index 0
+[2025-05-12T13:26:51.749Z] [INFO] Processing page 4359 of 50257
+[2025-05-12T13:26:52.004Z] [ERROR] Failed to fetch movies from page 4359: AxiosError: Request failed with status code 400
+[2025-05-12T13:26:52.004Z] [INFO] Progress saved: Page 4359, Index 0
+[2025-05-12T13:26:52.005Z] [INFO] Processing page 4360 of 50257
+[2025-05-12T13:26:52.262Z] [ERROR] Failed to fetch movies from page 4360: AxiosError: Request failed with status code 400
+[2025-05-12T13:26:52.263Z] [INFO] Progress saved: Page 4360, Index 0
+[2025-05-12T13:26:52.263Z] [INFO] Processing page 4361 of 50257
+[2025-05-12T13:26:52.521Z] [ERROR] Failed to fetch movies from page 4361: AxiosError: Request failed with status code 400
+[2025-05-12T13:26:52.521Z] [INFO] Progress saved: Page 4361, Index 0
+[2025-05-12T13:26:52.521Z] [INFO] Processing page 4362 of 50257
+[2025-05-12T13:26:52.781Z] [ERROR] Failed to fetch movies from page 4362: AxiosError: Request failed with status code 400
+[2025-05-12T13:26:52.782Z] [INFO] Progress saved: Page 4362, Index 0
+[2025-05-12T13:26:52.782Z] [INFO] Processing page 4363 of 50257
+[2025-05-12T13:26:53.047Z] [ERROR] Failed to fetch movies from page 4363: AxiosError: Request failed with status code 400
+[2025-05-12T13:26:53.047Z] [INFO] Progress saved: Page 4363, Index 0
+[2025-05-12T13:26:53.047Z] [INFO] Processing page 4364 of 50257
+[2025-05-12T13:26:53.302Z] [ERROR] Failed to fetch movies from page 4364: AxiosError: Request failed with status code 400
+[2025-05-12T13:26:53.302Z] [INFO] Progress saved: Page 4364, Index 0
+[2025-05-12T13:26:53.302Z] [INFO] Processing page 4365 of 50257
+[2025-05-12T13:26:53.557Z] [ERROR] Failed to fetch movies from page 4365: AxiosError: Request failed with status code 400
+[2025-05-12T13:26:53.557Z] [INFO] Progress saved: Page 4365, Index 0
+[2025-05-12T13:26:53.557Z] [INFO] Processing page 4366 of 50257
+[2025-05-12T13:26:53.812Z] [ERROR] Failed to fetch movies from page 4366: AxiosError: Request failed with status code 400
+[2025-05-12T13:26:53.812Z] [INFO] Progress saved: Page 4366, Index 0
+[2025-05-12T13:26:53.812Z] [INFO] Processing page 4367 of 50257
+[2025-05-12T13:26:54.069Z] [ERROR] Failed to fetch movies from page 4367: AxiosError: Request failed with status code 400
+[2025-05-12T13:26:54.070Z] [INFO] Progress saved: Page 4367, Index 0
+[2025-05-12T13:26:54.070Z] [INFO] Processing page 4368 of 50257
+[2025-05-12T13:26:54.327Z] [ERROR] Failed to fetch movies from page 4368: AxiosError: Request failed with status code 400
+[2025-05-12T13:26:54.327Z] [INFO] Progress saved: Page 4368, Index 0
+[2025-05-12T13:26:54.327Z] [INFO] Processing page 4369 of 50257
+[2025-05-12T13:26:54.595Z] [ERROR] Failed to fetch movies from page 4369: AxiosError: Request failed with status code 400
+[2025-05-12T13:26:54.596Z] [INFO] Progress saved: Page 4369, Index 0
+[2025-05-12T13:26:54.596Z] [INFO] Processing page 4370 of 50257
+[2025-05-12T13:26:54.849Z] [ERROR] Failed to fetch movies from page 4370: AxiosError: Request failed with status code 400
+[2025-05-12T13:26:54.850Z] [INFO] Progress saved: Page 4370, Index 0
+[2025-05-12T13:26:54.850Z] [INFO] Processing page 4371 of 50257
+[2025-05-12T13:26:55.104Z] [ERROR] Failed to fetch movies from page 4371: AxiosError: Request failed with status code 400
+[2025-05-12T13:26:55.105Z] [INFO] Progress saved: Page 4371, Index 0
+[2025-05-12T13:26:55.105Z] [INFO] Processing page 4372 of 50257
+[2025-05-12T13:26:55.361Z] [ERROR] Failed to fetch movies from page 4372: AxiosError: Request failed with status code 400
+[2025-05-12T13:26:55.361Z] [INFO] Progress saved: Page 4372, Index 0
+[2025-05-12T13:26:55.362Z] [INFO] Processing page 4373 of 50257
+[2025-05-12T13:26:55.617Z] [ERROR] Failed to fetch movies from page 4373: AxiosError: Request failed with status code 400
+[2025-05-12T13:26:55.617Z] [INFO] Progress saved: Page 4373, Index 0
+[2025-05-12T13:26:55.617Z] [INFO] Processing page 4374 of 50257
+[2025-05-12T13:26:55.871Z] [ERROR] Failed to fetch movies from page 4374: AxiosError: Request failed with status code 400
+[2025-05-12T13:26:55.871Z] [INFO] Progress saved: Page 4374, Index 0
+[2025-05-12T13:26:55.871Z] [INFO] Processing page 4375 of 50257
+[2025-05-12T13:26:56.126Z] [ERROR] Failed to fetch movies from page 4375: AxiosError: Request failed with status code 400
+[2025-05-12T13:26:56.126Z] [INFO] Progress saved: Page 4375, Index 0
+[2025-05-12T13:26:56.126Z] [INFO] Processing page 4376 of 50257
+[2025-05-12T13:26:56.383Z] [ERROR] Failed to fetch movies from page 4376: AxiosError: Request failed with status code 400
+[2025-05-12T13:26:56.383Z] [INFO] Progress saved: Page 4376, Index 0
+[2025-05-12T13:26:56.383Z] [INFO] Processing page 4377 of 50257
+[2025-05-12T13:26:56.638Z] [ERROR] Failed to fetch movies from page 4377: AxiosError: Request failed with status code 400
+[2025-05-12T13:26:56.639Z] [INFO] Progress saved: Page 4377, Index 0
+[2025-05-12T13:26:56.639Z] [INFO] Processing page 4378 of 50257
+[2025-05-12T13:26:56.894Z] [ERROR] Failed to fetch movies from page 4378: AxiosError: Request failed with status code 400
+[2025-05-12T13:26:56.895Z] [INFO] Progress saved: Page 4378, Index 0
+[2025-05-12T13:26:56.895Z] [INFO] Processing page 4379 of 50257
+[2025-05-12T13:26:57.148Z] [ERROR] Failed to fetch movies from page 4379: AxiosError: Request failed with status code 400
+[2025-05-12T13:26:57.148Z] [INFO] Progress saved: Page 4379, Index 0
+[2025-05-12T13:26:57.148Z] [INFO] Processing page 4380 of 50257
+[2025-05-12T13:26:57.403Z] [ERROR] Failed to fetch movies from page 4380: AxiosError: Request failed with status code 400
+[2025-05-12T13:26:57.403Z] [INFO] Progress saved: Page 4380, Index 0
+[2025-05-12T13:26:57.403Z] [INFO] Processing page 4381 of 50257
+[2025-05-12T13:26:57.656Z] [ERROR] Failed to fetch movies from page 4381: AxiosError: Request failed with status code 400
+[2025-05-12T13:26:57.657Z] [INFO] Progress saved: Page 4381, Index 0
+[2025-05-12T13:26:57.657Z] [INFO] Processing page 4382 of 50257
+[2025-05-12T13:26:57.954Z] [ERROR] Failed to fetch movies from page 4382: AxiosError: Request failed with status code 400
+[2025-05-12T13:26:57.955Z] [INFO] Progress saved: Page 4382, Index 0
+[2025-05-12T13:26:57.955Z] [INFO] Processing page 4383 of 50257
+[2025-05-12T13:26:58.209Z] [ERROR] Failed to fetch movies from page 4383: AxiosError: Request failed with status code 400
+[2025-05-12T13:26:58.210Z] [INFO] Progress saved: Page 4383, Index 0
+[2025-05-12T13:26:58.210Z] [INFO] Processing page 4384 of 50257
+[2025-05-12T13:26:58.464Z] [ERROR] Failed to fetch movies from page 4384: AxiosError: Request failed with status code 400
+[2025-05-12T13:26:58.465Z] [INFO] Progress saved: Page 4384, Index 0
+[2025-05-12T13:26:58.465Z] [INFO] Processing page 4385 of 50257
+[2025-05-12T13:26:58.723Z] [ERROR] Failed to fetch movies from page 4385: AxiosError: Request failed with status code 400
+[2025-05-12T13:26:58.724Z] [INFO] Progress saved: Page 4385, Index 0
+[2025-05-12T13:26:58.724Z] [INFO] Processing page 4386 of 50257
+[2025-05-12T13:26:58.977Z] [ERROR] Failed to fetch movies from page 4386: AxiosError: Request failed with status code 400
+[2025-05-12T13:26:58.978Z] [INFO] Progress saved: Page 4386, Index 0
+[2025-05-12T13:26:58.978Z] [INFO] Processing page 4387 of 50257
+[2025-05-12T13:26:59.234Z] [ERROR] Failed to fetch movies from page 4387: AxiosError: Request failed with status code 400
+[2025-05-12T13:26:59.235Z] [INFO] Progress saved: Page 4387, Index 0
+[2025-05-12T13:26:59.235Z] [INFO] Processing page 4388 of 50257
+[2025-05-12T13:26:59.500Z] [ERROR] Failed to fetch movies from page 4388: AxiosError: Request failed with status code 400
+[2025-05-12T13:26:59.501Z] [INFO] Progress saved: Page 4388, Index 0
+[2025-05-12T13:26:59.501Z] [INFO] Processing page 4389 of 50257
+[2025-05-12T13:26:59.756Z] [ERROR] Failed to fetch movies from page 4389: AxiosError: Request failed with status code 400
+[2025-05-12T13:26:59.757Z] [INFO] Progress saved: Page 4389, Index 0
+[2025-05-12T13:26:59.757Z] [INFO] Processing page 4390 of 50257
+[2025-05-12T13:27:00.012Z] [ERROR] Failed to fetch movies from page 4390: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:00.012Z] [INFO] Progress saved: Page 4390, Index 0
+[2025-05-12T13:27:00.012Z] [INFO] Processing page 4391 of 50257
+[2025-05-12T13:27:00.267Z] [ERROR] Failed to fetch movies from page 4391: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:00.268Z] [INFO] Progress saved: Page 4391, Index 0
+[2025-05-12T13:27:00.268Z] [INFO] Processing page 4392 of 50257
+[2025-05-12T13:27:00.525Z] [ERROR] Failed to fetch movies from page 4392: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:00.525Z] [INFO] Progress saved: Page 4392, Index 0
+[2025-05-12T13:27:00.525Z] [INFO] Processing page 4393 of 50257
+[2025-05-12T13:27:00.779Z] [ERROR] Failed to fetch movies from page 4393: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:00.779Z] [INFO] Progress saved: Page 4393, Index 0
+[2025-05-12T13:27:00.780Z] [INFO] Processing page 4394 of 50257
+[2025-05-12T13:27:01.034Z] [ERROR] Failed to fetch movies from page 4394: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:01.034Z] [INFO] Progress saved: Page 4394, Index 0
+[2025-05-12T13:27:01.034Z] [INFO] Processing page 4395 of 50257
+[2025-05-12T13:27:01.286Z] [ERROR] Failed to fetch movies from page 4395: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:01.286Z] [INFO] Progress saved: Page 4395, Index 0
+[2025-05-12T13:27:01.286Z] [INFO] Processing page 4396 of 50257
+[2025-05-12T13:27:01.540Z] [ERROR] Failed to fetch movies from page 4396: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:01.541Z] [INFO] Progress saved: Page 4396, Index 0
+[2025-05-12T13:27:01.541Z] [INFO] Processing page 4397 of 50257
+[2025-05-12T13:27:01.842Z] [ERROR] Failed to fetch movies from page 4397: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:01.842Z] [INFO] Progress saved: Page 4397, Index 0
+[2025-05-12T13:27:01.842Z] [INFO] Processing page 4398 of 50257
+[2025-05-12T13:27:02.103Z] [ERROR] Failed to fetch movies from page 4398: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:02.103Z] [INFO] Progress saved: Page 4398, Index 0
+[2025-05-12T13:27:02.104Z] [INFO] Processing page 4399 of 50257
+[2025-05-12T13:27:02.359Z] [ERROR] Failed to fetch movies from page 4399: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:02.359Z] [INFO] Progress saved: Page 4399, Index 0
+[2025-05-12T13:27:02.360Z] [INFO] Processing page 4400 of 50257
+[2025-05-12T13:27:02.613Z] [ERROR] Failed to fetch movies from page 4400: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:02.613Z] [INFO] Progress saved: Page 4400, Index 0
+[2025-05-12T13:27:02.613Z] [INFO] Processing page 4401 of 50257
+[2025-05-12T13:27:02.911Z] [ERROR] Failed to fetch movies from page 4401: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:02.912Z] [INFO] Progress saved: Page 4401, Index 0
+[2025-05-12T13:27:02.912Z] [INFO] Processing page 4402 of 50257
+[2025-05-12T13:27:03.169Z] [ERROR] Failed to fetch movies from page 4402: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:03.170Z] [INFO] Progress saved: Page 4402, Index 0
+[2025-05-12T13:27:03.170Z] [INFO] Processing page 4403 of 50257
+[2025-05-12T13:27:03.431Z] [ERROR] Failed to fetch movies from page 4403: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:03.431Z] [INFO] Progress saved: Page 4403, Index 0
+[2025-05-12T13:27:03.432Z] [INFO] Processing page 4404 of 50257
+[2025-05-12T13:27:03.696Z] [ERROR] Failed to fetch movies from page 4404: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:03.696Z] [INFO] Progress saved: Page 4404, Index 0
+[2025-05-12T13:27:03.696Z] [INFO] Processing page 4405 of 50257
+[2025-05-12T13:27:03.992Z] [ERROR] Failed to fetch movies from page 4405: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:03.993Z] [INFO] Progress saved: Page 4405, Index 0
+[2025-05-12T13:27:03.993Z] [INFO] Processing page 4406 of 50257
+[2025-05-12T13:27:04.251Z] [ERROR] Failed to fetch movies from page 4406: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:04.252Z] [INFO] Progress saved: Page 4406, Index 0
+[2025-05-12T13:27:04.252Z] [INFO] Processing page 4407 of 50257
+[2025-05-12T13:27:04.547Z] [ERROR] Failed to fetch movies from page 4407: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:04.547Z] [INFO] Progress saved: Page 4407, Index 0
+[2025-05-12T13:27:04.548Z] [INFO] Processing page 4408 of 50257
+[2025-05-12T13:27:04.802Z] [ERROR] Failed to fetch movies from page 4408: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:04.802Z] [INFO] Progress saved: Page 4408, Index 0
+[2025-05-12T13:27:04.802Z] [INFO] Processing page 4409 of 50257
+[2025-05-12T13:27:05.057Z] [ERROR] Failed to fetch movies from page 4409: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:05.058Z] [INFO] Progress saved: Page 4409, Index 0
+[2025-05-12T13:27:05.058Z] [INFO] Processing page 4410 of 50257
+[2025-05-12T13:27:05.315Z] [ERROR] Failed to fetch movies from page 4410: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:05.316Z] [INFO] Progress saved: Page 4410, Index 0
+[2025-05-12T13:27:05.316Z] [INFO] Processing page 4411 of 50257
+[2025-05-12T13:27:05.574Z] [ERROR] Failed to fetch movies from page 4411: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:05.574Z] [INFO] Progress saved: Page 4411, Index 0
+[2025-05-12T13:27:05.575Z] [INFO] Processing page 4412 of 50257
+[2025-05-12T13:27:05.874Z] [ERROR] Failed to fetch movies from page 4412: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:05.874Z] [INFO] Progress saved: Page 4412, Index 0
+[2025-05-12T13:27:05.874Z] [INFO] Processing page 4413 of 50257
+[2025-05-12T13:27:06.130Z] [ERROR] Failed to fetch movies from page 4413: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:06.130Z] [INFO] Progress saved: Page 4413, Index 0
+[2025-05-12T13:27:06.131Z] [INFO] Processing page 4414 of 50257
+[2025-05-12T13:27:06.387Z] [ERROR] Failed to fetch movies from page 4414: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:06.387Z] [INFO] Progress saved: Page 4414, Index 0
+[2025-05-12T13:27:06.387Z] [INFO] Processing page 4415 of 50257
+[2025-05-12T13:27:06.644Z] [ERROR] Failed to fetch movies from page 4415: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:06.644Z] [INFO] Progress saved: Page 4415, Index 0
+[2025-05-12T13:27:06.644Z] [INFO] Processing page 4416 of 50257
+[2025-05-12T13:27:06.899Z] [ERROR] Failed to fetch movies from page 4416: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:06.900Z] [INFO] Progress saved: Page 4416, Index 0
+[2025-05-12T13:27:06.900Z] [INFO] Processing page 4417 of 50257
+[2025-05-12T13:27:07.159Z] [ERROR] Failed to fetch movies from page 4417: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:07.160Z] [INFO] Progress saved: Page 4417, Index 0
+[2025-05-12T13:27:07.160Z] [INFO] Processing page 4418 of 50257
+[2025-05-12T13:27:07.421Z] [ERROR] Failed to fetch movies from page 4418: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:07.422Z] [INFO] Progress saved: Page 4418, Index 0
+[2025-05-12T13:27:07.422Z] [INFO] Processing page 4419 of 50257
+[2025-05-12T13:27:07.680Z] [ERROR] Failed to fetch movies from page 4419: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:07.681Z] [INFO] Progress saved: Page 4419, Index 0
+[2025-05-12T13:27:07.681Z] [INFO] Processing page 4420 of 50257
+[2025-05-12T13:27:07.939Z] [ERROR] Failed to fetch movies from page 4420: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:07.940Z] [INFO] Progress saved: Page 4420, Index 0
+[2025-05-12T13:27:07.940Z] [INFO] Processing page 4421 of 50257
+[2025-05-12T13:27:08.197Z] [ERROR] Failed to fetch movies from page 4421: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:08.198Z] [INFO] Progress saved: Page 4421, Index 0
+[2025-05-12T13:27:08.198Z] [INFO] Processing page 4422 of 50257
+[2025-05-12T13:27:08.457Z] [ERROR] Failed to fetch movies from page 4422: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:08.457Z] [INFO] Progress saved: Page 4422, Index 0
+[2025-05-12T13:27:08.457Z] [INFO] Processing page 4423 of 50257
+[2025-05-12T13:27:08.712Z] [ERROR] Failed to fetch movies from page 4423: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:08.712Z] [INFO] Progress saved: Page 4423, Index 0
+[2025-05-12T13:27:08.712Z] [INFO] Processing page 4424 of 50257
+[2025-05-12T13:27:08.968Z] [ERROR] Failed to fetch movies from page 4424: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:08.968Z] [INFO] Progress saved: Page 4424, Index 0
+[2025-05-12T13:27:08.968Z] [INFO] Processing page 4425 of 50257
+[2025-05-12T13:27:09.224Z] [ERROR] Failed to fetch movies from page 4425: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:09.225Z] [INFO] Progress saved: Page 4425, Index 0
+[2025-05-12T13:27:09.225Z] [INFO] Processing page 4426 of 50257
+[2025-05-12T13:27:09.482Z] [ERROR] Failed to fetch movies from page 4426: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:09.483Z] [INFO] Progress saved: Page 4426, Index 0
+[2025-05-12T13:27:09.483Z] [INFO] Processing page 4427 of 50257
+[2025-05-12T13:27:09.738Z] [ERROR] Failed to fetch movies from page 4427: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:09.739Z] [INFO] Progress saved: Page 4427, Index 0
+[2025-05-12T13:27:09.739Z] [INFO] Processing page 4428 of 50257
+[2025-05-12T13:27:09.997Z] [ERROR] Failed to fetch movies from page 4428: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:09.997Z] [INFO] Progress saved: Page 4428, Index 0
+[2025-05-12T13:27:09.998Z] [INFO] Processing page 4429 of 50257
+[2025-05-12T13:27:10.296Z] [ERROR] Failed to fetch movies from page 4429: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:10.297Z] [INFO] Progress saved: Page 4429, Index 0
+[2025-05-12T13:27:10.297Z] [INFO] Processing page 4430 of 50257
+[2025-05-12T13:27:10.555Z] [ERROR] Failed to fetch movies from page 4430: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:10.555Z] [INFO] Progress saved: Page 4430, Index 0
+[2025-05-12T13:27:10.556Z] [INFO] Processing page 4431 of 50257
+[2025-05-12T13:27:10.815Z] [ERROR] Failed to fetch movies from page 4431: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:10.816Z] [INFO] Progress saved: Page 4431, Index 0
+[2025-05-12T13:27:10.816Z] [INFO] Processing page 4432 of 50257
+[2025-05-12T13:27:11.073Z] [ERROR] Failed to fetch movies from page 4432: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:11.074Z] [INFO] Progress saved: Page 4432, Index 0
+[2025-05-12T13:27:11.074Z] [INFO] Processing page 4433 of 50257
+[2025-05-12T13:27:11.336Z] [ERROR] Failed to fetch movies from page 4433: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:11.337Z] [INFO] Progress saved: Page 4433, Index 0
+[2025-05-12T13:27:11.337Z] [INFO] Processing page 4434 of 50257
+[2025-05-12T13:27:11.596Z] [ERROR] Failed to fetch movies from page 4434: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:11.597Z] [INFO] Progress saved: Page 4434, Index 0
+[2025-05-12T13:27:11.597Z] [INFO] Processing page 4435 of 50257
+[2025-05-12T13:27:11.853Z] [ERROR] Failed to fetch movies from page 4435: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:11.854Z] [INFO] Progress saved: Page 4435, Index 0
+[2025-05-12T13:27:11.854Z] [INFO] Processing page 4436 of 50257
+[2025-05-12T13:27:12.115Z] [ERROR] Failed to fetch movies from page 4436: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:12.116Z] [INFO] Progress saved: Page 4436, Index 0
+[2025-05-12T13:27:12.116Z] [INFO] Processing page 4437 of 50257
+[2025-05-12T13:27:12.371Z] [ERROR] Failed to fetch movies from page 4437: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:12.371Z] [INFO] Progress saved: Page 4437, Index 0
+[2025-05-12T13:27:12.371Z] [INFO] Processing page 4438 of 50257
+[2025-05-12T13:27:12.626Z] [ERROR] Failed to fetch movies from page 4438: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:12.626Z] [INFO] Progress saved: Page 4438, Index 0
+[2025-05-12T13:27:12.626Z] [INFO] Processing page 4439 of 50257
+[2025-05-12T13:27:12.927Z] [ERROR] Failed to fetch movies from page 4439: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:12.927Z] [INFO] Progress saved: Page 4439, Index 0
+[2025-05-12T13:27:12.927Z] [INFO] Processing page 4440 of 50257
+[2025-05-12T13:27:13.182Z] [ERROR] Failed to fetch movies from page 4440: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:13.183Z] [INFO] Progress saved: Page 4440, Index 0
+[2025-05-12T13:27:13.183Z] [INFO] Processing page 4441 of 50257
+[2025-05-12T13:27:13.438Z] [ERROR] Failed to fetch movies from page 4441: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:13.438Z] [INFO] Progress saved: Page 4441, Index 0
+[2025-05-12T13:27:13.438Z] [INFO] Processing page 4442 of 50257
+[2025-05-12T13:27:13.696Z] [ERROR] Failed to fetch movies from page 4442: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:13.696Z] [INFO] Progress saved: Page 4442, Index 0
+[2025-05-12T13:27:13.697Z] [INFO] Processing page 4443 of 50257
+[2025-05-12T13:27:13.954Z] [ERROR] Failed to fetch movies from page 4443: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:13.954Z] [INFO] Progress saved: Page 4443, Index 0
+[2025-05-12T13:27:13.955Z] [INFO] Processing page 4444 of 50257
+[2025-05-12T13:27:14.252Z] [ERROR] Failed to fetch movies from page 4444: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:14.253Z] [INFO] Progress saved: Page 4444, Index 0
+[2025-05-12T13:27:14.253Z] [INFO] Processing page 4445 of 50257
+[2025-05-12T13:27:14.546Z] [ERROR] Failed to fetch movies from page 4445: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:14.546Z] [INFO] Progress saved: Page 4445, Index 0
+[2025-05-12T13:27:14.546Z] [INFO] Processing page 4446 of 50257
+[2025-05-12T13:27:14.803Z] [ERROR] Failed to fetch movies from page 4446: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:14.803Z] [INFO] Progress saved: Page 4446, Index 0
+[2025-05-12T13:27:14.803Z] [INFO] Processing page 4447 of 50257
+[2025-05-12T13:27:15.067Z] [ERROR] Failed to fetch movies from page 4447: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:15.067Z] [INFO] Progress saved: Page 4447, Index 0
+[2025-05-12T13:27:15.067Z] [INFO] Processing page 4448 of 50257
+[2025-05-12T13:27:15.369Z] [ERROR] Failed to fetch movies from page 4448: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:15.370Z] [INFO] Progress saved: Page 4448, Index 0
+[2025-05-12T13:27:15.370Z] [INFO] Processing page 4449 of 50257
+[2025-05-12T13:27:15.626Z] [ERROR] Failed to fetch movies from page 4449: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:15.627Z] [INFO] Progress saved: Page 4449, Index 0
+[2025-05-12T13:27:15.627Z] [INFO] Processing page 4450 of 50257
+[2025-05-12T13:27:15.884Z] [ERROR] Failed to fetch movies from page 4450: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:15.884Z] [INFO] Progress saved: Page 4450, Index 0
+[2025-05-12T13:27:15.884Z] [INFO] Processing page 4451 of 50257
+[2025-05-12T13:27:16.178Z] [ERROR] Failed to fetch movies from page 4451: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:16.178Z] [INFO] Progress saved: Page 4451, Index 0
+[2025-05-12T13:27:16.178Z] [INFO] Processing page 4452 of 50257
+[2025-05-12T13:27:16.475Z] [ERROR] Failed to fetch movies from page 4452: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:16.476Z] [INFO] Progress saved: Page 4452, Index 0
+[2025-05-12T13:27:16.476Z] [INFO] Processing page 4453 of 50257
+[2025-05-12T13:27:16.734Z] [ERROR] Failed to fetch movies from page 4453: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:16.735Z] [INFO] Progress saved: Page 4453, Index 0
+[2025-05-12T13:27:16.735Z] [INFO] Processing page 4454 of 50257
+[2025-05-12T13:27:16.990Z] [ERROR] Failed to fetch movies from page 4454: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:16.991Z] [INFO] Progress saved: Page 4454, Index 0
+[2025-05-12T13:27:16.991Z] [INFO] Processing page 4455 of 50257
+[2025-05-12T13:27:17.247Z] [ERROR] Failed to fetch movies from page 4455: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:17.248Z] [INFO] Progress saved: Page 4455, Index 0
+[2025-05-12T13:27:17.248Z] [INFO] Processing page 4456 of 50257
+[2025-05-12T13:27:17.509Z] [ERROR] Failed to fetch movies from page 4456: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:17.510Z] [INFO] Progress saved: Page 4456, Index 0
+[2025-05-12T13:27:17.510Z] [INFO] Processing page 4457 of 50257
+[2025-05-12T13:27:17.768Z] [ERROR] Failed to fetch movies from page 4457: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:17.768Z] [INFO] Progress saved: Page 4457, Index 0
+[2025-05-12T13:27:17.769Z] [INFO] Processing page 4458 of 50257
+[2025-05-12T13:27:18.026Z] [ERROR] Failed to fetch movies from page 4458: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:18.026Z] [INFO] Progress saved: Page 4458, Index 0
+[2025-05-12T13:27:18.027Z] [INFO] Processing page 4459 of 50257
+[2025-05-12T13:27:18.283Z] [ERROR] Failed to fetch movies from page 4459: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:18.283Z] [INFO] Progress saved: Page 4459, Index 0
+[2025-05-12T13:27:18.283Z] [INFO] Processing page 4460 of 50257
+[2025-05-12T13:27:18.537Z] [ERROR] Failed to fetch movies from page 4460: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:18.538Z] [INFO] Progress saved: Page 4460, Index 0
+[2025-05-12T13:27:18.538Z] [INFO] Processing page 4461 of 50257
+[2025-05-12T13:27:18.795Z] [ERROR] Failed to fetch movies from page 4461: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:18.795Z] [INFO] Progress saved: Page 4461, Index 0
+[2025-05-12T13:27:18.795Z] [INFO] Processing page 4462 of 50257
+[2025-05-12T13:27:19.097Z] [ERROR] Failed to fetch movies from page 4462: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:19.098Z] [INFO] Progress saved: Page 4462, Index 0
+[2025-05-12T13:27:19.098Z] [INFO] Processing page 4463 of 50257
+[2025-05-12T13:27:19.351Z] [ERROR] Failed to fetch movies from page 4463: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:19.351Z] [INFO] Progress saved: Page 4463, Index 0
+[2025-05-12T13:27:19.351Z] [INFO] Processing page 4464 of 50257
+[2025-05-12T13:27:19.704Z] [ERROR] Failed to fetch movies from page 4464: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:19.705Z] [INFO] Progress saved: Page 4464, Index 0
+[2025-05-12T13:27:19.705Z] [INFO] Processing page 4465 of 50257
+[2025-05-12T13:27:19.972Z] [ERROR] Failed to fetch movies from page 4465: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:19.973Z] [INFO] Progress saved: Page 4465, Index 0
+[2025-05-12T13:27:19.973Z] [INFO] Processing page 4466 of 50257
+[2025-05-12T13:27:20.235Z] [ERROR] Failed to fetch movies from page 4466: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:20.235Z] [INFO] Progress saved: Page 4466, Index 0
+[2025-05-12T13:27:20.235Z] [INFO] Processing page 4467 of 50257
+[2025-05-12T13:27:20.489Z] [ERROR] Failed to fetch movies from page 4467: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:20.489Z] [INFO] Progress saved: Page 4467, Index 0
+[2025-05-12T13:27:20.490Z] [INFO] Processing page 4468 of 50257
+[2025-05-12T13:27:20.745Z] [ERROR] Failed to fetch movies from page 4468: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:20.746Z] [INFO] Progress saved: Page 4468, Index 0
+[2025-05-12T13:27:20.746Z] [INFO] Processing page 4469 of 50257
+[2025-05-12T13:27:21.003Z] [ERROR] Failed to fetch movies from page 4469: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:21.004Z] [INFO] Progress saved: Page 4469, Index 0
+[2025-05-12T13:27:21.004Z] [INFO] Processing page 4470 of 50257
+[2025-05-12T13:27:21.263Z] [ERROR] Failed to fetch movies from page 4470: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:21.264Z] [INFO] Progress saved: Page 4470, Index 0
+[2025-05-12T13:27:21.264Z] [INFO] Processing page 4471 of 50257
+[2025-05-12T13:27:21.517Z] [ERROR] Failed to fetch movies from page 4471: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:21.518Z] [INFO] Progress saved: Page 4471, Index 0
+[2025-05-12T13:27:21.518Z] [INFO] Processing page 4472 of 50257
+[2025-05-12T13:27:21.774Z] [ERROR] Failed to fetch movies from page 4472: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:21.775Z] [INFO] Progress saved: Page 4472, Index 0
+[2025-05-12T13:27:21.775Z] [INFO] Processing page 4473 of 50257
+[2025-05-12T13:27:22.036Z] [ERROR] Failed to fetch movies from page 4473: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:22.037Z] [INFO] Progress saved: Page 4473, Index 0
+[2025-05-12T13:27:22.037Z] [INFO] Processing page 4474 of 50257
+[2025-05-12T13:27:22.291Z] [ERROR] Failed to fetch movies from page 4474: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:22.292Z] [INFO] Progress saved: Page 4474, Index 0
+[2025-05-12T13:27:22.292Z] [INFO] Processing page 4475 of 50257
+[2025-05-12T13:27:22.556Z] [ERROR] Failed to fetch movies from page 4475: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:22.557Z] [INFO] Progress saved: Page 4475, Index 0
+[2025-05-12T13:27:22.557Z] [INFO] Processing page 4476 of 50257

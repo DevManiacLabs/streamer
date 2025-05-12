@@ -24,6 +24,7 @@ export default function EpisodePage() {
   const [episodeDropdownOpen, setEpisodeDropdownOpen] = useState(false);
   const [currentSourceIndex, setCurrentSourceIndex] = useState(0);
   const iframeRef = useRef<HTMLIFrameElement>(null);
+  const historyAddedRef = useRef(false);
   
   // Create multiple embed URL formats to try in case one fails
   // These are the different formats supported by VidSrc as per their documentation
@@ -67,8 +68,14 @@ export default function EpisodePage() {
   }, [showId, seasonNumber, episodeNumber, show, showLoading]);
 
   useEffect(() => {
-    // Add to watch history when episode is loaded
-    if (show && episodeDetails && isAuthenticated && !episodeLoading && !showLoading) {
+    // Reset the history tracking ref when episode or show changes
+    historyAddedRef.current = false;
+  }, [showId, seasonNumber, episodeNumber]);
+
+  useEffect(() => {
+    // Add to watch history only once when episode is loaded
+    if (show && episodeDetails && isAuthenticated && !episodeLoading && !showLoading && !historyAddedRef.current) {
+      historyAddedRef.current = true;
       addToHistory.mutate({
         contentType: 'tvshow',
         contentId: showId,
@@ -79,7 +86,7 @@ export default function EpisodePage() {
         episodeName: episodeDetails.name || `Episode ${episodeNumber}`
       });
     }
-  }, [show, episodeDetails, showId, seasonNumber, episodeNumber, isAuthenticated, episodeLoading, showLoading, addToHistory]);
+  }, [show, episodeDetails, isAuthenticated, episodeLoading, showLoading]);
 
   // Calculate accurate number of episodes per season
   const getMaxEpisodes = () => {

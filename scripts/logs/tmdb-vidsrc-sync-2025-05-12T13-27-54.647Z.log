@@ -1,0 +1,41 @@
+[2025-05-12T13:27:54.656Z] [INFO] Initializing TMDB to VidSrc Movie Sync...
+[2025-05-12T13:27:54.657Z] [INFO] Options: startPage=1, dryRun=false, concurrency=10
+[2025-05-12T13:27:55.674Z] [INFO] Connected to MongoDB successfully
+[2025-05-12T13:27:55.675Z] [INFO] Resuming from progress: Page 4475, Index 0
+[2025-05-12T13:27:55.676Z] [INFO] Processing page 4475 of 50257
+[2025-05-12T13:27:56.257Z] [ERROR] Failed to fetch movies from page 4475: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:56.257Z] [INFO] Progress saved: Page 4475, Index 0
+[2025-05-12T13:27:56.257Z] [INFO] Processing page 4476 of 50257
+[2025-05-12T13:27:56.484Z] [ERROR] Failed to fetch movies from page 4476: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:56.485Z] [INFO] Progress saved: Page 4476, Index 0
+[2025-05-12T13:27:56.485Z] [INFO] Processing page 4477 of 50257
+[2025-05-12T13:27:56.731Z] [ERROR] Failed to fetch movies from page 4477: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:56.731Z] [INFO] Progress saved: Page 4477, Index 0
+[2025-05-12T13:27:56.731Z] [INFO] Processing page 4478 of 50257
+[2025-05-12T13:27:56.976Z] [ERROR] Failed to fetch movies from page 4478: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:56.976Z] [INFO] Progress saved: Page 4478, Index 0
+[2025-05-12T13:27:56.977Z] [INFO] Processing page 4479 of 50257
+[2025-05-12T13:27:57.221Z] [ERROR] Failed to fetch movies from page 4479: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:57.222Z] [INFO] Progress saved: Page 4479, Index 0
+[2025-05-12T13:27:57.222Z] [INFO] Processing page 4480 of 50257
+[2025-05-12T13:27:57.465Z] [ERROR] Failed to fetch movies from page 4480: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:57.466Z] [INFO] Progress saved: Page 4480, Index 0
+[2025-05-12T13:27:57.466Z] [INFO] Processing page 4481 of 50257
+[2025-05-12T13:27:57.715Z] [ERROR] Failed to fetch movies from page 4481: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:57.716Z] [INFO] Progress saved: Page 4481, Index 0
+[2025-05-12T13:27:57.716Z] [INFO] Processing page 4482 of 50257
+[2025-05-12T13:27:57.964Z] [ERROR] Failed to fetch movies from page 4482: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:57.965Z] [INFO] Progress saved: Page 4482, Index 0
+[2025-05-12T13:27:57.965Z] [INFO] Processing page 4483 of 50257
+[2025-05-12T13:27:58.213Z] [ERROR] Failed to fetch movies from page 4483: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:58.213Z] [INFO] Progress saved: Page 4483, Index 0
+[2025-05-12T13:27:58.213Z] [INFO] Processing page 4484 of 50257
+[2025-05-12T13:27:58.462Z] [ERROR] Failed to fetch movies from page 4484: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:58.463Z] [INFO] Progress saved: Page 4484, Index 0
+[2025-05-12T13:27:58.463Z] [INFO] Processing page 4485 of 50257
+[2025-05-12T13:27:58.705Z] [ERROR] Failed to fetch movies from page 4485: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:58.706Z] [INFO] Progress saved: Page 4485, Index 0
+[2025-05-12T13:27:58.707Z] [INFO] Processing page 4486 of 50257
+[2025-05-12T13:27:58.952Z] [ERROR] Failed to fetch movies from page 4486: AxiosError: Request failed with status code 400
+[2025-05-12T13:27:58.952Z] [INFO] Progress saved: Page 4486, Index 0
+[2025-05-12T13:27:58.952Z] [INFO] Processing page 4487 of 50257

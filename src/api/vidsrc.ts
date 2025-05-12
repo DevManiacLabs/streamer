@@ -1,7 +1,7 @@
-import axios from 'axios';
+import { API_CONFIG } from "@/lib/config";
 
-// Types for API responses
-export interface Movie {
+// VidSrc API Types
+export interface VidSrcMovie {
   imdb_id: string;
   tmdb_id: string;
   title: string;
@@ -10,7 +10,7 @@ export interface Movie {
   quality: string;
 }
 
-export interface TVShow {
+export interface VidSrcTVShow {
   imdb_id: string;
   tmdb_id: string | null;
   title: string;
@@ -18,7 +18,7 @@ export interface TVShow {
   embed_url_tmdb?: string;
 }
 
-export interface Episode {
+export interface VidSrcEpisode {
   imdb_id: string;
   tmdb_id: string | null;
   show_title: string;
@@ -30,19 +30,26 @@ export interface Episode {
   released_date?: string;
 }
 
-interface ListResponse<T> {
+export interface VidSrcListResponse<T> {
   result: T[];
   pages: number;
 }
 
-// Base API URL
-const API_BASE_URL = 'https://vidsrc.xyz';
+// Destructure configuration for cleaner code
+const { BASE_URL, ALTERNATIVE_DOMAINS } = API_CONFIG.VIDSRC;
 
-// Helper function for making API requests
-const makeRequest = async <T>(endpoint: string): Promise<ListResponse<T>> => {
+/**
+ * Generic request function for VidSrc API
+ */
+const fetchFromVidSrc = async <T>(endpoint: string): Promise<VidSrcListResponse<T>> => {
   try {
-    const response = await axios.get<ListResponse<T>>(`${API_BASE_URL}${endpoint}`);
-    return response.data;
+    const response = await fetch(`${BASE_URL}${endpoint}`);
+    
+    if (!response.ok) {
+      throw new Error(`VidSrc API error: ${response.status}`);
+    }
+    
+    return response.json();
   } catch (error) {
     console.error(`Error fetching ${endpoint}:`, error);
     return { result: [], pages: 0 };
@@ -50,24 +57,31 @@ const makeRequest = async <T>(endpoint: string): Promise<ListResponse<T>> => {
 };
 
 // API Services
-export const getLatestMovies = (page = 1) => 
-  makeRequest<Movie>(`/movies/latest/page-${page}.json`);
+export const getLatestMovies = (page = 1): Promise<VidSrcListResponse<VidSrcMovie>> => 
+  fetchFromVidSrc<VidSrcMovie>(`/movies/latest/page-${page}.json`);
 
-export const getLatestTVShows = (page = 1) => 
-  makeRequest<TVShow>(`/tvshows/latest/page-${page}.json`);
+export const getLatestTVShows = (page = 1): Promise<VidSrcListResponse<VidSrcTVShow>> => 
+  fetchFromVidSrc<VidSrcTVShow>(`/tvshows/latest/page-${page}.json`);
 
-export const getLatestEpisodes = (page = 1) => 
-  makeRequest<Episode>(`/episodes/latest/page-${page}.json`);
+export const getLatestEpisodes = (page = 1): Promise<VidSrcListResponse<VidSrcEpisode>> => 
+  fetchFromVidSrc<VidSrcEpisode>(`/episodes/latest/page-${page}.json`);
 
-// Helper function for building embed URLs
+/**
+ * Build embed URL for movies or TV shows
+ */
 const buildEmbedUrl = (
   type: 'movie' | 'tv',
   tmdbId: string,
-  options?: { season?: number; episode?: number; subUrl?: string; dsLang?: string }
-) => {
-  // For TV episodes, use the format recommended in the documentation: vidsrc.xyz/embed/tv/tmdbId/season-episode
+  options?: { 
+    season?: number; 
+    episode?: number; 
+    subUrl?: string; 
+    dsLang?: string;
+  }
+): string => {
+  // For TV episodes, use the format recommended in the documentation
   if (type === 'tv' && options?.season && options?.episode) {
-    return `${API_BASE_URL}/embed/tv/${tmdbId}/${options.season}-${options.episode}`;
+    return `${BASE_URL}/embed/tv/${tmdbId}/${options.season}-${options.episode}`;
   }
   
   // For other cases, use the query parameter approach
@@ -79,27 +93,63 @@ const buildEmbedUrl = (
   if (options?.subUrl) params.append('sub_url', options.subUrl);
   if (options?.dsLang) params.append('ds_lang', options.dsLang);
   
-  return `${API_BASE_URL}/embed/${type}?${params.toString()}`;
+  return `${BASE_URL}/embed/${type}?${params.toString()}`;
+};
+
+/**
+ * Get all possible embed URLs for a video (using all available domains)
+ */
+export const getAllPossibleEmbedUrls = (
+  type: 'movie' | 'tv',
+  tmdbId: string,
+  options?: { 
+    season?: number; 
+    episode?: number; 
+    subUrl?: string; 
+    dsLang?: string;
+  }
+): string[] => {
+  return ALTERNATIVE_DOMAINS.map(domain => {
+    // Base URL with specific domain
+    const baseUrl = `https://${domain}`;
+    
+    // For TV episodes with season and episode
+    if (type === 'tv' && options?.season && options?.episode) {
+      return `${baseUrl}/embed/tv/${tmdbId}/${options.season}-${options.episode}`;
+    }
+    
+    // Build params
+    const params = new URLSearchParams();
+    params.append('tmdb', tmdbId);
+    
+    if (options?.season) params.append('season', options.season.toString());
+    if (options?.episode) params.append('episode', options.episode.toString());
+    if (options?.subUrl) params.append('sub_url', options.subUrl);
+    if (options?.dsLang) params.append('ds_lang', options.dsLang);
+    
+    return `${baseUrl}/embed/${type}?${params.toString()}`;
+  });
 };
 
 // Embed URL generators
-export const getMovieEmbedUrl = (tmdbId: string, options?: { subUrl?: string; dsLang?: string }) => 
-  buildEmbedUrl('movie', tmdbId, options);
+export const getMovieEmbedUrl = (
+  tmdbId: string, 
+  options?: { subUrl?: string; dsLang?: string }
+): string => buildEmbedUrl('movie', tmdbId, options);
 
-export const getTVShowEmbedUrl = (tmdbId: string, options?: { dsLang?: string }) => 
-  buildEmbedUrl('tv', tmdbId, options);
+export const getTVShowEmbedUrl = (
+  tmdbId: string, 
+  options?: { dsLang?: string }
+): string => buildEmbedUrl('tv', tmdbId, options);
 
 export const getEpisodeEmbedUrl = (
   tmdbId: string,
   season: number,
   episode: number,
   options?: { subUrl?: string; dsLang?: string }
-) => {
-  // Using the recommended format from the documentation
-  return `${API_BASE_URL}/embed/tv/${tmdbId}/${season}-${episode}`;
-};
+): string => `${BASE_URL}/embed/tv/${tmdbId}/${season}-${episode}`;
 
-// Aliases for TMDb IDs
+// Aliases for backwards compatibility
 export const getMovieEmbedUrlByTmdb = getMovieEmbedUrl;
 export const getTVShowEmbedUrlByTmdb = getTVShowEmbedUrl;
 export const getEpisodeEmbedUrlByTmdb = getEpisodeEmbedUrl; 

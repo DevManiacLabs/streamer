@@ -1,38 +1,59 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 import { getToken } from 'next-auth/jwt';
+import { ROUTE_CONFIG } from '@/lib/config';
 
+/**
+ * Middleware to handle authentication and route protection
+ * 
+ * Checks if user is authenticated for protected routes and
+ * redirects to login page if not.
+ */
 export async function middleware(request: NextRequest) {
+  // Get NextAuth token
   const secret = process.env.NEXTAUTH_SECRET;
   const token = await getToken({ req: request, secret });
   const isAuthenticated = !!token;
 
-  // Path the user is trying to access
+  // Current path the user is trying to access
   const { pathname } = request.nextUrl;
   
-  // Paths that require authentication
-  const protectedPaths = ['/profile', '/favorites', '/watch-history'];
-  // Check if the path requires authentication
-  const isProtectedPath = protectedPaths.some(path => pathname.startsWith(path));
+  // List of paths that require authentication
+  const protectedPaths = [
+    ROUTE_CONFIG.USER.WATCH_HISTORY,
+    ROUTE_CONFIG.USER.FAVORITES,
+    ROUTE_CONFIG.AUTH.PROFILE,
+  ];
+  
+  // Check if the current path is a protected path or starts with one
+  const isProtectedPath = protectedPaths.some(path => 
+    pathname === path || pathname.startsWith(`${path}/`)
+  );
 
   // Authentication logic
   if (isProtectedPath && !isAuthenticated) {
-    // Redirect to login if trying to access a protected route while not authenticated
-    const url = new URL('/login', request.url);
-    url.searchParams.set('callbackUrl', encodeURI(pathname));
-    return NextResponse.redirect(url);
+    // Create a redirect URL to the login page with callback to current page
+    const redirectUrl = new URL(ROUTE_CONFIG.AUTH.LOGIN, request.url);
+    redirectUrl.searchParams.set('callbackUrl', encodeURI(pathname));
+    
+    return NextResponse.redirect(redirectUrl);
   }
 
-  // If trying to access login/signup pages while already authenticated, redirect to home
-  if ((pathname.startsWith('/login') || pathname.startsWith('/signup')) && isAuthenticated) {
-    return NextResponse.redirect(new URL('/', request.url));
+  // Redirect away from auth pages if already authenticated
+  if (isAuthenticated && (
+    pathname === ROUTE_CONFIG.AUTH.LOGIN || 
+    pathname === ROUTE_CONFIG.AUTH.SIGNUP
+  )) {
+    return NextResponse.redirect(new URL(ROUTE_CONFIG.HOME, request.url));
   }
 
+  // Allow request to continue
   return NextResponse.next();
 }
 
-// See "Matching Paths" below to learn more
+// Matching paths configuration
 export const config = {
+  // Define paths where middleware should be executed
   matcher: [
     '/profile/:path*',
     '/favorites/:path*',
